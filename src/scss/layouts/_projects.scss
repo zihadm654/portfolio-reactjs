@@ -1,0 +1,29 @@
+.project {
+  position: relative;
+  padding: 4rem 8rem;
+  @include media(sm) {
+    padding: 2.5rem;
+  }
+  @include media(md) {
+    padding: 3.7rem;
+  }
+  @include media(lg) {
+    padding: 5rem;
+  }
+  .project__title {
+    padding: 2rem 0;
+    h2 {
+      font-weight: 600;
+      margin: 1.2rem 0;
+    }
+    p {
+      width: 50ch;
+    }
+  }
+  button {
+    position: absolute;
+    margin: 0;
+    bottom: -4rem;
+    left: 40%;
+  }
+}

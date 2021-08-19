@@ -1,0 +1,58 @@
+.contact {
+  padding: 4rem 8rem;
+  color: #000;
+  @include grid;
+  @include media(sm) {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  &__title {
+    h4 {
+      margin: 1rem 0;
+    }
+    font-weight: 600;
+    text-align: center;
+    grid-column: 1/13;
+  }
+  .callaction {
+    justify-content: center;
+    grid-column: 1/13;
+    @include flex(space-evenly);
+  }
+  .media {
+    grid-column: 1/13;
+    @include grid;
+    .copyright {
+      position: relative;
+      grid-column: 1/13;
+      text-align: center;
+      .lang {
+        display: none;
+        position: absolute;
+        bottom: 2.5rem;
+        left: 30%;
+        text-align: center;
+        background: #000;
+        color: #fff;
+        padding: 1rem;
+        font-weight: 500;
+        width: 100%;
+      }
+    }
+    hr {
+      grid-column: 1/13;
+      width: 30%;
+      justify-self: center;
+    }
+    .social__media {
+      grid-column: 1/13;
+      justify-self: center;
+      a {
+        color: #000;
+        align-self: center;
+        font-size: $p;
+        padding: 1rem;
+      }
+    }
+  }
+}

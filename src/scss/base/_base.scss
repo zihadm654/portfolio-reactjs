@@ -1,0 +1,69 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  // cursor: none;
+}
+::-webkit-scrollbar {
+  width: 0.9rem !important;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(160, 160, 160);
+  border-radius: 0.8rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 70%;
+  @include media(sm) {
+    font-size: 37.51%;
+  }
+  @include media(md) {
+    font-size: 44%;
+  }
+  @include media(lg) {
+    font-size: 56.25%;
+  }
+  @include media(xlg) {
+    font-size: 64.5%;
+  }
+}
+body {
+  font-family: $main-font;
+  // background: #000000;
+  color: $dominant;
+  // @include flex(center);
+}
+a {
+  color: $dominant;
+}
+span {
+  color: $dominant;
+  font-weight: 700;
+}
+.hamburger,
+.secondary__background,
+.hero__wrapper,
+.describe,
+// .inner__header,
+.project,
+.testimonial,
+.testimonial__title,
+.progress,
+.slider,
+.skills__container,
+.about__wrapper,
+.about__page,
+.contact,
+.contact__page,
+.story__page,
+.case__details,
+.blog__details {
+  @include media(xxlg) {
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+  }
+}
