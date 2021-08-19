@@ -9,7 +9,7 @@ const BlogDetails = () => {
   useEffect(() => {
     const newArray = Blogs.find(array => array.slug === slug)
     setBlog(newArray)
-  }, [])
+  }, [slug])
 
   if (!blog) return <div>Loading...</div>
   return (

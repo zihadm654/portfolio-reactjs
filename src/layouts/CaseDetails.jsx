@@ -7,7 +7,7 @@ const CaseDetails = () => {
   useEffect(() => {
     const newArray = projectData.find(array => array.slug === slug)
     setProject(newArray)
-  }, [])
+  }, [slug])
 
   if (!project) return <div>Loading...</div>
   return (
