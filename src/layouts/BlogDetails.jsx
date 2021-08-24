@@ -20,14 +20,9 @@ const BlogDetails = () => {
           <img src={blog.img} alt={blog.authorImg} />
         </div>
         <div className="description">
-          <div className="author__container">
-            <div className="author__img">
-              <img src={blog.authorImage} alt={blog.authorImage} />
-            </div>
-            <div className="author__info">
-              <h5>{blog.author}-</h5>
-              <span>{blog.place}</span>
-            </div>
+          <div className="time">
+            <h5>{blog.place}-</h5>
+            <span>2 May, 2033</span>
           </div>
           <h5>{blog.breif}</h5>
         </div>

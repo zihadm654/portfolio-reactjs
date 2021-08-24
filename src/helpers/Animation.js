@@ -72,7 +72,6 @@ export const describe = (elem) => {
       trigger: elem,
       start: 'top 85%',
       end: 'bottom center',
-      scale: 0.8,
     },
   });
 };

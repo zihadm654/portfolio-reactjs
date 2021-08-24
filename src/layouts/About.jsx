@@ -17,13 +17,11 @@ const About = () => {
           <h5>Hi, I’m Abdul Malik</h5>
           <h3>Frontend-developer & UI/UX designer Crafting projects</h3>
           <p>
-            My journey from an Arts Student to a Front-end developer with
-            designing experience.
+            My journey as a self taught frontend developer with designing experience. As a self taught frontend developer it take a lot of dedications. <br /> Skills:- Reactjs, Javascript, Scss, Html, Css, Gsap, Github, Git.
           </p>
-
-          <Icon linkName={"/story"}
+          <Icon
+            linkName={"/story"}
             text="read my story" />
-
         </div>
       </div>
     </div>

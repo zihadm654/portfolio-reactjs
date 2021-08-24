@@ -1,6 +1,9 @@
 .case__details {
   margin-top: 4rem;
   padding: 4rem 7rem;
+  @include media(sm) {
+    padding: 2.5rem;
+  }
   .case__study {
     text-align: center;
     h2 {

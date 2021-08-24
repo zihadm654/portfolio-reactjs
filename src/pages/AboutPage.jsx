@@ -11,7 +11,7 @@ import {
   SiGit,
   SiWebpack,
   SiGreensock,
-  SiStyledComponents,
+  SiFirebase,
 } from 'react-icons/si'
 const AboutPage = () => {
 
@@ -41,16 +41,16 @@ const AboutPage = () => {
           <h3>LANGUAGES & TOOLS I DO USE</h3>
         </div>
         <div className="languages">
+          <SiReact className="language react" />
+          <SiJavascript className="language javascript" />
+          <SiSass className="language scss" />
           <SiHtml5 className="language html" />
           <SiCss3 className="language css" />
-          <SiSass className="language scss" />
-          <SiJavascript className="language javascript" />
-          <SiReact className="language react" />
           <SiGithub className="language" />
           <SiGit className="language git" />
           <SiWebpack className="language webpack" />
           <SiGreensock className="language gsap" />
-          <SiStyledComponents className="language styled" />
+          <SiFirebase className="language firebase" />
         </div>
       </div>
       <div className="tools">

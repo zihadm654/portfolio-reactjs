@@ -99,7 +99,7 @@ header {
               grid-column: span 6;
               @include media(sm) {
                 grid-column: 1/13;
-                justify-self: start;
+                justify-self: flex-start;
               }
               @include media(md) {
                 grid-column: 1/13;

@@ -1,6 +1,9 @@
 .blog__details {
   margin-top: 5rem;
-  padding: 4rem 7rem;
+  padding: 4rem 8rem;
+  @include media(sm) {
+    padding: 2.5rem;
+  }
   article {
     h4 {
       font-weight: 600;
@@ -22,7 +25,7 @@
       }
       .author__container {
         padding-bottom: 1rem;
-        @include flex(start);
+        @include flex(flex-start);
         .author__img {
           height: 5rem;
           width: 5rem;

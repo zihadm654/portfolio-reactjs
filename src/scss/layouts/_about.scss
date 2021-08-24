@@ -17,7 +17,6 @@
       grid-column: span 6;
       background: red;
       @include media(sm) {
-        height: 35rem;
         grid-column: 1/13;
       }
       @include media(md) {

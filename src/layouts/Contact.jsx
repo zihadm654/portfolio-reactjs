@@ -1,11 +1,9 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { Link } from "react-router-dom"
 import Button from '../helpers/Button'
 import Footer from '../components/Footer'
 const Contact = () => {
   const [info, setInfo] = useState(false)
-  let lang = useRef(null)
-
   return (
     <>
       <section className="contact">
@@ -52,12 +50,12 @@ const Contact = () => {
               &copy; 2021 Abdul Malik || Made in
               {' '}
               <span
-                ref={lang}
-                className="lang">
-                Reactjs Html5 Scss JavaScript React Icons
+                className={info ? "active" : ""}
+                onClick={() => { setInfo(!info) }}>Info.
               </span>
-              <span
-                onClick={() => { setInfo(!info) }}>Info.{ }</span>
+            </p>
+            <p className="lang">
+              {info ? 'Reactjs Scss React-Icons Gsap Vscode' : ''}
             </p>
           </div>
         </div>

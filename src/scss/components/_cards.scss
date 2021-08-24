@@ -9,7 +9,6 @@
     padding: 2rem 0;
   }
   .card__wrapper {
-    transform: scale(0.8);
     position: relative;
     box-shadow: 3px 6px 12px rgba(255, 255, 255, 0.356) inset;
     @include media(md) {
