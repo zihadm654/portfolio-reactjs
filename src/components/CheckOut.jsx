@@ -1,6 +1,6 @@
 import React from 'react'
-import img1 from '../assets/Slice5.jpg'
-import img2 from '../assets/active-states.jpg'
+// import img1 from '../assets/Slice5.jpg'
+// import img2 from '../assets/active-states.jpg'
 import Icon from '../helpers/Icon'
 const CheckOut = () => {
   return (
