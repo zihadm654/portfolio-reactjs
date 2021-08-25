@@ -8,7 +8,7 @@ import {
   Links
 } from '../helpers/Animation'
 
-const Hamburger = ({ menu }) => {
+const Hamburger = ({ menu, close }) => {
   let burger = useRef(null)
   let revealMenu = useRef(null)
   let revealMenuBackground = useRef(null)
@@ -55,19 +55,30 @@ const Hamburger = ({ menu }) => {
               <nav className="navbar">
                 <ul className="nav__links">
                   <li ref={(el) => (list1 = el)}>
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink
+                      onClick={close}
+                      to="/">Home</NavLink>
                   </li>
-                  <li ref={(el) => (list2 = el)}>
-                    <NavLink to="/projects">Projects</NavLink>
+                  <li
+                    ref={(el) => (list2 = el)}>
+                    <NavLink
+                      onClick={close}
+                      to="/projects">Projects</NavLink>
                   </li>
                   <li ref={(el) => (list3 = el)}>
-                    <NavLink to="/about">About</NavLink>
+                    <NavLink
+                      onClick={close}
+                      to="/about">About</NavLink>
                   </li>
                   <li ref={(el) => (list4 = el)}>
-                    <NavLink to="/blogs">Blogs</NavLink>
+                    <NavLink
+                      onClick={close}
+                      to="/blogs">Blogs</NavLink>
                   </li>
                   <li ref={(el) => (list5 = el)}>
-                    <NavLink to="/story">Story</NavLink>
+                    <NavLink
+                      onClick={close}
+                      to="/story">Story</NavLink>
                   </li>
                 </ul>
               </nav>
@@ -86,7 +97,7 @@ const Hamburger = ({ menu }) => {
               to={{ pathname: 'https://dribbble.com/zihadm654' }}
               target="_blank"
             >
-              Dribbble
+              Dribble
             </NavLink>
             <NavLink to={{ pathname: 'https://behance.net/zihadm654' }} target="_blank">
               Behance
@@ -106,7 +117,7 @@ const Hamburger = ({ menu }) => {
               }}
               target="_blank"
             >
-              Linkdin
+              Linkedin
             </NavLink>
           </div>
         </div>

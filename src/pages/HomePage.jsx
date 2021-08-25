@@ -9,7 +9,7 @@ import About from '../layouts/About'
 const HomePage = () => {
   useEffect(() => {
     window.scroll(0, 0)
-  })
+  }, [])
   return (
     <main>
       <Hero />

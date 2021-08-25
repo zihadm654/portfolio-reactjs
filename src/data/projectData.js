@@ -1,8 +1,8 @@
 import Img1 from '../assets/Slice5.jpg';
 import Img2 from '../assets/single-page.jpg';
 import Img3 from '../assets/Slice7.jpg';
-
-export const projectData = [
+import Img4 from '../assets/active-states.jpg';
+export const projectsData = [
   {
     id: 1,
     name: 'A breif about my Portfolio',
@@ -26,5 +26,13 @@ export const projectData = [
     description:
       'A portfolio site which is packed with UI/UX Design. And a clear functionality',
     Img: Img3,
+  },
+  {
+    id: 4,
+    name: 'A breif about my Portfolio',
+    slug: 'fourth-case',
+    description:
+      'A quick glimpse at a few of a portfolio site which is packed with UI/UX Design',
+    Img: Img4,
   },
 ];

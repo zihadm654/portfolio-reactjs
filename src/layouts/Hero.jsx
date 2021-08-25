@@ -20,18 +20,18 @@ const Hero = () => {
         </div>
         <h5
           ref={(el) => { heading = el }}>
-          Hello,I am Abdul  Malik
+          Hello,I am Abdul Malik
           <svg width="40px" height="1" color="#8f00ff">
             <path fillRule="evenodd" d="M0 0h66v4H0z" />
           </svg>
-          Available For Freelance Work
+          🚀Available For Freelance Work
         </h5>
         <h1
           ref={(el) => {
             heading2 = el
           }}
         >
-          Less is more, Simple is clearity
+          Taking your vision and serving as a reality
         </h1>
         <p
           ref={(el) => {

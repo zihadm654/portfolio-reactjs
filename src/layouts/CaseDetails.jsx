@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { projectData } from '../data/projectData.js'
+import { projectsData } from '../data/projectData.js'
 const CaseDetails = () => {
   const [project, setProject] = useState(null);
   const { slug } = useParams()
   useEffect(() => {
-    const newArray = projectData.find(array => array.slug === slug)
+    const newArray = projectsData.find(array => array.slug === slug)
     setProject(newArray)
   }, [slug])
 

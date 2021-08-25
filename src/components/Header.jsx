@@ -1,23 +1,17 @@
-import React, { useState, useEffect } from 'react'
-import { withRouter, NavLink } from 'react-router-dom'
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { MdClose } from "react-icons/md"
 import Logo from '../assets/logo.png'
 import Hamburger from './Hamburger'
 
-const Header = ({ history }) => {
+const Header = () => {
+  const close = () => {
+    setMenu(!menu)
+  }
   const [menu, setMenu] = useState(true)
-  useEffect(() => {
-    history.listen(() => {
-      setMenu({ clicked: false, menuIcon: <GiHamburgerMenu style={{ fontSize: '2rem' }} /> })
-    })
-  })
-  const handleClick = (e) => {
-    if (menu) {
-      setMenu(prev => !prev)
-    } else {
-      setMenu(prev => !prev)
-    }
+  const handleClick = () => {
+    menu ? setMenu(prev => !prev) : setMenu(prev => !prev)
   }
   const [sticky, setSticky] = useState(false)
   const stickyNav = () => {
@@ -50,8 +44,8 @@ const Header = ({ history }) => {
           </div>
         </div>
       </div>
-      <Hamburger menu={menu} />
+      <Hamburger menu={menu} close={close} />
     </header>
   )
 }
-export default withRouter(Header)
+export default Header

@@ -1,0 +1,30 @@
+.checkout {
+  padding: 4rem 0;
+  @include flex(center);
+  background: $dominant;
+  &__left {
+    &:hover {
+      background-image: url(../../assets/active-states.jpg);
+      z-index: 10;
+      cursor: pointer;
+    }
+    flex: 0.5;
+    @include flex(center);
+    .content {
+      p {
+        padding: 1rem 0;
+      }
+      color: #fff;
+    }
+  }
+  &__right {
+    flex: 0.5;
+    @include flex(center);
+    .content {
+      p {
+        padding: 1rem 0;
+      }
+      color: #fff;
+    }
+  }
+}

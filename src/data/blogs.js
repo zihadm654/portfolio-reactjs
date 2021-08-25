@@ -1,8 +1,7 @@
 export const Blogs = [
   {
     id: 1,
-    title: 'Top 5 Vscode tips & tricks',
-    slug: 'first-blog-post',
+    title: 'Top 5 Vscode tips & tricks for productivity',
     place: 'Washinton D.C',
     breif:
       "if you are a vscode user you might have know or heard about all the tips & tricks. Let's take a look at these thing",
@@ -37,7 +36,6 @@ export const Blogs = [
     id: 2,
     title: 'Top 5 sites to learn web development',
     author: 'Creay',
-    slug: 'second-blog-post',
     place: 'jercy usa',
     breif:
       "if you are a vscode user you might have know or heard about all the tips & tricks. Let's take a look at these thing",
@@ -72,7 +70,6 @@ export const Blogs = [
     id: 3,
     title: 'React beginner helps in 10 times',
     author: 'Creay',
-    slug: 'second-blog-post',
     place: 'jercy usa',
     breif:
       "if you are a vscode user you might have know or heard about all the tips & tricks. Let's take a look at these thing",

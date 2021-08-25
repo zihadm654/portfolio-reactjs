@@ -43,7 +43,7 @@ const Skills = () => {
           img={
             'https://uploads-ssl.webflow.com/5efbc66bfe713c08511b3024/5efe20a6310d7d81e659aa04_Website%20Development%20Icon.svg'
           }
-          title={'Website Development'}
+          title={'Frontend Development'}
           description={
             'custom Crafting Beautiful website redesign recreate from scretch'
           }

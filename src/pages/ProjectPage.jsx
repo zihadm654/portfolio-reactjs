@@ -1,6 +1,7 @@
 import React from 'react'
 // import Loader from '../components/Loader'
 import Cards from '../components/Cards'
+
 const ProjectPage = () => {
   return (
     <section className="project">
@@ -17,6 +18,7 @@ const ProjectPage = () => {
       </div>
       <h3>Personal Projects</h3>
       <Cards />
+      <h3>Featured project</h3>
     </section>
   )
 }

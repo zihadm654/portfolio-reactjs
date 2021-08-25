@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react'
-// import { SlideData } from "../components/SlideData"
-// import Loader from "../components/Loader"
 import {
   SiHtml5,
   SiCss3,
@@ -13,8 +11,9 @@ import {
   SiGreensock,
   SiFirebase,
 } from 'react-icons/si'
-const AboutPage = () => {
+import CheckOut from '../components/CheckOut'
 
+const AboutPage = () => {
   useEffect(() => {
     window.scroll(0, 0)
   }, [])
@@ -23,7 +22,7 @@ const AboutPage = () => {
       <div className="about__description">
         <h5>A FEW WORDS ABOUT ME</h5>
         <h3>
-          I’m Abdul Malik, a <span>Front-end-developer & UI/UX designer </span> who focuses on
+          I’m Abdul Malik, a <span>Frontend-developer & UI/UX designer </span> who focuses on
           telling stories visually, through <span>minimalistic </span> and clear way. I design and develop <span>responsive websites </span>and functional user friendly interfaces.
         </h3>
         <p>
@@ -55,20 +54,20 @@ const AboutPage = () => {
       </div>
       <div className="tools">
         <div className="tools__left">
-          <h5>DEVELOPER SERVICES</h5>
+          <h5>DEVELOPMENT SERVICES</h5>
           <h4>
-            Web & mobile / Front-end / Responsive / Animation / Functional
+            Responsive Website / Minimalistic Website / Agency Website / Animation
           </h4>
         </div>
         <div className="tools__middle">
           <h5>DESIGN SERVICES</h5>
           <h4>
-            Art direction / Web & Mobile / UX & UI / Typography / Interface
+            Art direction / Web & Mobile / UX & UI / Typography / Interface / Iconography
           </h4>
         </div>
         <div className="tools__right">
           <h5>TOOLS I USE</h5>
-          <h4>VS code / Figma / Photoshop / Adobe XD / Pen & paper</h4>
+          <h4>VS code / Firebase / Figma / Pen & paper / Type Scaler / Google fonts</h4>
         </div>
       </div>
       <div className="experience">
@@ -81,6 +80,7 @@ const AboutPage = () => {
           head over to my<span> LinkedIn profile</span>.
         </p>
       </div>
+      <CheckOut />
     </section >
   )
 }

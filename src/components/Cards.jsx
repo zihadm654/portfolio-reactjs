@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import { describe } from "../helpers/Animation"
 import { Link } from 'react-router-dom'
 import { HiOutlineArrowRight } from 'react-icons/hi'
-import { projectData } from "../data/projectData.js"
+import { projectsData } from "../data/projectData.js"
 
 const Cards = () => {
   // const [project, setProject] = useState(false)
@@ -15,7 +15,7 @@ const Cards = () => {
     <div className="project__container">
 
       <div className="cards">
-        {projectData.map((project, index) => {
+        {projectsData.map((project, index) => {
           return (
             <main
               key={index}

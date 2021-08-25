@@ -7,7 +7,7 @@ const BlogDetails = () => {
   const { slug } = useParams(null)
 
   useEffect(() => {
-    const newArray = Blogs.find(array => array.slug === slug)
+    const newArray = Blogs.find(array => array.title === slug)
     setBlog(newArray)
   }, [slug])
 

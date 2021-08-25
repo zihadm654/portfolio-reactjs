@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { describe } from "../helpers/Animation"
@@ -20,7 +19,7 @@ const BlogPage = () => {
             ref={(el) => (box = el)}
             key={index}
             className="content">
-            <Link to={"/blogs/" + blog.slug}>
+            <Link to={"/blogs/" + blog.title}>
               <div className="blog__img">
                 <img src={blog.img} alt={blog.img} />
               </div>
