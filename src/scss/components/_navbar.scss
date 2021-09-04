@@ -1,3 +1,7 @@
+@use '../helpers/variables' as v;
+@use '../helpers/mixins' as m;
+@use '../helpers/colors' as c;
+
 .inner__header.sticky {
   position: fixed;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
@@ -11,10 +15,10 @@
 }
 header {
   .inner__header {
-    @include media(sm) {
+    @include m.media(sm) {
       padding: 2.5rem;
     }
-    @include media(md) {
+    @include m.media(md) {
       padding: 2.5rem 3.7rem;
     }
     height: 7rem;
@@ -24,11 +28,11 @@ header {
     top: 0;
     left: 0;
     padding: 0 8rem;
-    @include flex(space-between);
+    @include m.flex(space-between);
     a {
       z-index: 10;
       .logo {
-        @include flex(center);
+        @include m.flex(center);
         img {
           height: 3.7rem;
           width: 3.7rem;
@@ -37,21 +41,21 @@ header {
           cursor: pointer;
         }
         h4 {
-          font-size: $md;
+          font-size: v.$md;
           padding-left: 1rem;
           padding-bottom: 0.5rem;
-          font-family: $title-font;
+          font-family: v.$title-font;
         }
       }
     }
     .menu {
-      @include flex(center);
+      @include m.flex(center);
       z-index: 10;
       cursor: pointer;
       p {
         margin-right: 0.8rem;
         margin-bottom: 0.4rem;
-        font-size: $sm;
+        font-size: v.$sm;
         font-weight: 600;
       }
     }
@@ -67,7 +71,7 @@ header {
     width: 100%;
     overflow: hidden;
     .secondary__background {
-      background: $secondaryColor;
+      background: c.$secondaryColor;
       top: 0;
       left: 0;
       right: 0;
@@ -79,11 +83,11 @@ header {
     }
     .menu__layer {
       position: relative;
-      background: $red;
+      background: c.$red;
       height: 100%;
       overflow: hidden;
       .container {
-        @include grid;
+        @include m.grid();
         height: 100%;
         overflow: hidden;
         width: 100%;
@@ -91,17 +95,17 @@ header {
           .menu__links {
             height: 100%;
             width: 100%;
-            @include grid;
+            @include m.grid();
             position: relative;
             top: 8rem;
             padding: 0 6rem;
             .navbar {
               grid-column: span 6;
-              @include media(sm) {
+              @include m.media(sm) {
                 grid-column: 1/13;
                 justify-self: flex-start;
               }
-              @include media(md) {
+              @include m.media(md) {
                 grid-column: 1/13;
               }
               .nav__links {
@@ -113,7 +117,7 @@ header {
                   height: 9rem;
                   position: relative;
                   a {
-                    font-size: $xxlr;
+                    font-size: v.$xxlr;
                     font-weight: 700;
                     color: #ffffff;
                     text-decoration: none;
@@ -125,11 +129,11 @@ header {
               }
             }
             .info {
-              @include media(sm) {
+              @include m.media(sm) {
                 grid-column: 1/13;
                 width: 60%;
               }
-              @include media(md) {
+              @include m.media(md) {
                 grid-column: 1/13;
                 width: 70%;
               }
@@ -150,7 +154,7 @@ header {
           justify-self: self-end;
           align-self: center;
           grid-column: 1/13;
-          @include media(sm) {
+          @include m.media(sm) {
             padding-right: 0rem;
             justify-self: center;
           }
@@ -159,7 +163,7 @@ header {
             margin-right: 2rem;
             transition: all 0.3s;
             &:hover {
-              background: $dominant;
+              background: c.$dominant;
               padding: 1rem 2rem;
             }
           }

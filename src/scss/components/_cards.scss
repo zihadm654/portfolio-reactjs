@@ -1,19 +1,23 @@
+@use '../helpers/variables' as v;
+@use '../helpers/mixins' as m;
+@use '../helpers/colors' as c;
+
 .cards {
-  @include grid;
+  @include m.grid();
   padding: 4rem 0;
   gap: 3rem;
-  @include media(md) {
+  @include m.media(md) {
     padding: 3rem 0;
   }
-  @include media(sm) {
+  @include m.media(sm) {
     padding: 2rem 0;
   }
   .card__wrapper {
     position: relative;
-    @include media(md) {
+    @include m.media(md) {
       grid-column: 1/13;
     }
-    @include media(sm) {
+    @include m.media(sm) {
       grid-column: 1/13;
     }
     grid-column: span 6;
@@ -42,8 +46,8 @@
         color: #000;
       }
       .link {
-        @include flex(left);
-        color: $secondaryColor;
+        @include m.flex(left);
+        color: c.$secondaryColor;
       }
     }
   }

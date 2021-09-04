@@ -1,3 +1,6 @@
+@use '../helpers/variables' as v;
+@use '../helpers/mixins' as m;
+@use '../helpers/colors' as c;
 .primary__btn {
   position: relative;
   overflow: hidden;
@@ -6,7 +9,7 @@
     font-weight: bold;
     text-transform: uppercase;
   }
-  background: $dominant;
+  background: c.$dominant;
   padding: 2.3rem 3.5rem;
   margin: 2rem 0;
   border-radius: 1.5rem;
@@ -18,16 +21,16 @@
   &:focus {
     transform: translateY(-0.8rem);
     cursor: pointer;
-    background-color: $secondaryColor;
+    background-color: c.$secondaryColor;
   }
-  @include media(sm) {
+  @include m.media(sm) {
     width: 100%;
     padding: 1.7rem 2rem;
   }
 }
 .secondary__btn {
   position: relative;
-  @include media(sm) {
+  @include m.media(sm) {
     height: 6rem;
     width: 18rem;
   }
@@ -37,7 +40,7 @@
   height: 6.5rem;
   width: 16.6rem;
   margin: 3rem 0;
-  background-color: $secondaryColor;
+  background-color: c.$secondaryColor;
   border-radius: 1rem;
   border: none;
   a {
@@ -55,11 +58,11 @@ a {
 .link {
   a {
     text-align: center;
-    @include flex(flex-start);
+    @include m.flex(flex-start);
     margin-top: 1.3rem;
-    color: $fontHighlight;
+    color: c.$fontHighlight;
     font-weight: 500;
-    font-size: $p;
+    font-size: v.$p;
   }
   &:hover {
     cursor: pointer;
@@ -89,13 +92,13 @@ a {
   &:focus {
     transform: translateY(-0.8rem);
     cursor: pointer;
-    background-color: $dominant;
+    background-color: c.$dominant;
 
     a {
       color: #ffffff;
     }
   }
-  @include media(sm) {
+  @include m.media(sm) {
     width: 100%;
     padding: 1.5rem 2rem;
   }

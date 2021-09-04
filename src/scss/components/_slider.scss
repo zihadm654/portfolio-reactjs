@@ -1,13 +1,16 @@
+@use '../helpers/variables' as v;
+@use '../helpers/mixins' as m;
+@use '../helpers/colors' as c;
 .slider {
   position: relative;
   margin: 4.5rem 0;
-  @include grid;
-  background-color: $dominant;
+  @include m.grid();
+  background-color: c.$dominant;
   height: 65rem;
   padding: 8rem;
   .clientInfo {
     grid-column: 1/6;
-    @include media(sm) {
+    @include m.media(sm) {
       grid-column: 1/13;
     }
     h4 {
@@ -15,13 +18,13 @@
       font-weight: 600;
     }
     p {
-      font-size: $p;
+      font-size: v.$p;
       font-weight: 400;
       color: rgba(255, 255, 255, 0.65);
     }
   }
   .slideContent {
-    @include media(sm) {
+    @include m.media(sm) {
       grid-column: 1/13;
       padding: 4rem 2rem;
     }
@@ -33,7 +36,7 @@
       p {
         color: #fff;
         line-height: 2rem;
-        font-size: $p;
+        font-size: v.$p;
       }
       .left-quote,
       .right-quote {
@@ -56,9 +59,9 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    @include flex(space-between);
+    @include m.flex(space-between);
     .btn {
-      @include media(sm) {
+      @include m.media(sm) {
         height: 50%;
       }
       transition: ease-in-out 300ms;
@@ -66,27 +69,27 @@
       color: #fff;
       padding: 1.5rem;
       cursor: pointer;
-      font-size: $md;
+      font-size: v.$md;
       border: none;
       background: transparent;
       &:hover {
-        color: $fontColor;
+        color: c.$fontColor;
         background: rgba(255, 255, 255, 0.202);
       }
     }
     .dots {
-      @include flex(center);
+      @include m.flex(center);
       position: absolute;
       bottom: 3%;
       left: 40%;
-      @include media(sm) {
+      @include m.media(sm) {
         left: 32%;
       }
       .dot {
         width: 4rem;
         height: 0.6rem;
         margin-left: 1rem;
-        background: $fontColor;
+        background: c.$fontColor;
         cursor: pointer;
         &.active {
           background: #fff;

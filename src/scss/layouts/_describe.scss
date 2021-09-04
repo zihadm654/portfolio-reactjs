@@ -1,14 +1,16 @@
+@use '../helpers/mixins' as m;
+@use '../helpers/variables' as v;
 .describe {
-  @include grid;
+  @include m.grid;
   padding: 4rem 8rem;
-  @include media(sm) {
+  @include m.media(sm) {
     padding: 2.5rem;
   }
   &__left {
-    @include media(sm) {
+    @include m.media(sm) {
       grid-column: 1/13;
     }
-    @include media(md) {
+    @include m.media(md) {
       grid-column: 1/13;
     }
     align-self: center;
@@ -16,7 +18,7 @@
     grid-column: span 6;
     h2 {
       font-weight: 400;
-      font-size: $sbtl;
+      font-size: v.$sbtl;
       line-height: 6.5rem;
       padding-bottom: 2.7rem;
     }
@@ -26,20 +28,20 @@
   }
   &__right {
     grid-column: span 6;
-    @include media(md) {
+    @include m.media(md) {
       grid-column: 1/13;
     }
-    @include media(sm) {
+    @include m.media(sm) {
       grid-column: 1/13;
     }
     .line__img {
       padding: 1rem 0;
       gap: 2rem;
-      @include flex(space-evenly);
+      @include m.flex(space-evenly);
       img {
         height: 5em;
         width: 5em;
-        @include media(xlg) {
+        @include m.media(xlg) {
           width: 8em;
           height: 8em;
         }
@@ -56,7 +58,7 @@
           padding-left: 3rem;
           margin-bottom: 0.5rem;
           background-position: 0 50%;
-          font-size: $p;
+          font-size: v.$p;
           list-style: none;
           background-image: url('https://uploads-ssl.webflow.com/603a00d2496482478db36f56/6059b9ce9376de30a9282afd_icon-checkmark.svg');
           background-repeat: no-repeat;

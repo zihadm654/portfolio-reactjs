@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import emailjs from 'emailjs-com'
-
+import Checkout from '../components/CheckOut'
 const ContactPage = () => {
-
   function sendEmail(e) {
     e.preventDefault();
 
@@ -14,6 +13,9 @@ const ContactPage = () => {
       })
     e.target.reset();
   }
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
   return (
     <section className="contact__page">
       <div className="content">
@@ -49,23 +51,18 @@ const ContactPage = () => {
           >Tell use about your project...</label>
         </div>
         <div>
-          <button
+          <button onClick={() => {
+
+          }}
             type="submit" value="submit"
           >Send Email</button>
         </div>
       </form>
       <div className="contact__container">
+        <Checkout />
       </div>
     </section>
   );
 };
 
 export default ContactPage;
-
-export const congrats = () => {
-  return (
-    <>
-      <h2>Your mail has been successfully send</h2>
-    </>
-  )
-}

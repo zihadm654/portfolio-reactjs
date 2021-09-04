@@ -2,6 +2,7 @@ import Img1 from '../assets/Slice5.jpg';
 import Img2 from '../assets/single-page.jpg';
 import Img3 from '../assets/Slice7.jpg';
 import Img4 from '../assets/active-states.jpg';
+import Img5 from '../assets/MacBook - 1.jpg';
 export const projectsData = [
   {
     id: 1,
@@ -34,5 +35,13 @@ export const projectsData = [
     description:
       'A quick glimpse at a few of a portfolio site which is packed with UI/UX Design',
     Img: Img4,
+  },
+  {
+    id: 5,
+    name: 'A breif about my Portfolio',
+    slug: 'fourth-case',
+    description:
+      'A quick glimpse at a few of a portfolio site which is packed with UI/UX Design',
+    Img: Img5,
   },
 ];

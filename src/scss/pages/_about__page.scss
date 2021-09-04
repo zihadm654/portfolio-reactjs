@@ -1,9 +1,13 @@
+@use '../helpers/variables' as v;
+@use '../helpers/mixins' as m;
+@use '../helpers/colors' as c;
+
 .about__page {
   padding: 4rem 7rem;
-  @include media(sm) {
+  @include m.media(sm) {
     padding: 2.5rem;
   }
-  @include media(md) {
+  @include m.media(md) {
     padding: 3.7rem;
   }
   .about__description,
@@ -11,11 +15,11 @@
     text-align: center;
     padding: 3rem;
     margin-top: 10rem;
-    @include media(sm) {
+    @include m.media(sm) {
       padding: 1.2rem 0;
       text-align: left;
     }
-    @include media(md) {
+    @include m.media(md) {
       padding: 1.5rem 0;
     }
     h5 {
@@ -25,11 +29,11 @@
     h3 {
       padding: 1.5rem 0;
       line-height: 4.7rem;
-      color: $dominant;
+      color: c.$dominant;
       font-weight: 400;
     }
     p {
-      color: $fontColor;
+      color: c.$fontColor;
       padding: 1rem 0;
       font-weight: 400;
       letter-spacing: 0.079rem;
@@ -71,16 +75,19 @@
     .languages {
       align-items: center;
       justify-items: center;
-      @include grid;
+      @include m.grid;
       grid-template-columns: repeat(10, 1fr);
       font-size: 3.2rem;
       padding: 2rem 1rem;
     }
   }
   .tools {
+    @include m.media(sm) {
+      text-align: left;
+    }
     text-align: center;
     padding: 4rem 0rem;
-    @include grid;
+    @include m.grid;
     gap: 4rem;
     h5 {
       letter-spacing: 0.15rem;
@@ -88,7 +95,7 @@
       font-weight: 600;
     }
     h4 {
-      font-size: $md;
+      font-size: v.$md;
       line-height: 4rem;
     }
     &__left {
@@ -103,10 +110,10 @@
     &__left,
     &__middle,
     &__right {
-      @include media(sm) {
+      @include m.media(sm) {
         grid-column: 1/13;
       }
-      @include media(md) {
+      @include m.media(md) {
         grid-column: 1/13;
       }
     }

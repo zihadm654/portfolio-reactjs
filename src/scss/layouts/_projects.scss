@@ -1,10 +1,12 @@
+@use '../helpers/mixins' as m;
+
 .project {
   position: relative;
   padding: 4rem 8rem;
-  @include media(sm) {
+  @include m.media(sm) {
     padding: 2.5rem;
   }
-  @include media(md) {
+  @include m.media(md) {
     padding: 3.7rem;
   }
   .project__title {

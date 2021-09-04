@@ -1,8 +1,11 @@
+@use '../helpers/variables' as v;
+@use '../helpers/mixins' as m;
+
 .contact {
   padding: 4rem 8rem;
   color: #000;
-  @include grid;
-  @include media(sm) {
+  @include m.grid;
+  @include m.media(sm) {
     padding: 3rem 2rem;
     text-align: center;
   }
@@ -17,11 +20,11 @@
   .callaction {
     justify-content: center;
     grid-column: 1/13;
-    @include flex(space-evenly);
+    @include m.flex(space-evenly);
   }
   .media {
     grid-column: 1/13;
-    @include grid;
+    @include m.grid;
     .copyright {
       position: relative;
       grid-column: 1/13;
@@ -38,7 +41,7 @@
       a {
         color: #000;
         align-self: center;
-        font-size: $p;
+        font-size: v.$p;
         padding: 1rem;
       }
     }
@@ -48,7 +51,7 @@
       cursor: pointer;
     }
     .lang {
-      @include media(sm) {
+      @include m.media(sm) {
         left: 30%;
       }
       position: absolute;

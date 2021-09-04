@@ -1,7 +1,10 @@
+@use '../helpers/variables' as v;
+@use '../helpers/mixins' as m;
+
 .blog__details {
   margin-top: 5rem;
   padding: 4rem 8rem;
-  @include media(sm) {
+  @include m.media(sm) {
     padding: 2.5rem;
   }
   article {
@@ -25,7 +28,7 @@
       }
       .author__container {
         padding-bottom: 1rem;
-        @include flex(flex-start);
+        @include m.flex(flex-start);
         .author__img {
           height: 5rem;
           width: 5rem;
@@ -38,9 +41,9 @@
         }
         .author__info {
           margin-left: 1rem;
-          font-size: $p;
+          font-size: v.$p;
           p {
-            font-size: $sm;
+            font-size: v.$sm;
           }
         }
       }

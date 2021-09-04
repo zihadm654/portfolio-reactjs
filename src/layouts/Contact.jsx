@@ -38,8 +38,8 @@ const Contact = () => {
               Github
             </Link>
             <Link
-              to={{ pathname: 'https://www.linkedin.com/in/Abdul -malek-a095031a4/', }}
-              targaet="_blank"
+              to={{ pathname: 'https://www.linkedin.com/in/zihadm654' }}
+              target="_blank"
             >
               Linkdin
             </Link>

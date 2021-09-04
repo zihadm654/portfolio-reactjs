@@ -1,3 +1,9 @@
+@use '../helpers/mixins' as m;
+@use '../helpers/variables' as v;
+@use '../helpers/colors' as c;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
 * {
   margin: 0%;
   padding: 0%;
@@ -17,30 +23,30 @@
 html {
   scroll-behavior: smooth;
   font-size: 70%;
-  @include media(sm) {
+  @include m.media(sm) {
     font-size: 37.51%;
   }
-  @include media(md) {
+  @include m.media(md) {
     font-size: 44%;
   }
-  @include media(lg) {
+  @include m.media(lg) {
     font-size: 56.25%;
   }
-  @include media(xlg) {
+  @include m.media(xlg) {
     font-size: 64.5%;
   }
 }
 body {
-  font-family: $main-font;
+  font-family: v.$main-font;
   // background: #000000;
-  color: $dominant;
+  color: c.$dominant;
   // @include flex(center);
 }
 a {
-  color: $dominant;
+  color: c.$dominant;
 }
 span {
-  color: $dominant;
+  color: c.$dominant;
   font-weight: 700;
 }
 .hamburger,
@@ -61,7 +67,7 @@ span {
 .story__page,
 .case__details,
 .blog__details {
-  @include media(xxlg) {
+  @include m.media(xxlg) {
     width: 100%;
     max-width: 1550px;
     margin: 0 auto;

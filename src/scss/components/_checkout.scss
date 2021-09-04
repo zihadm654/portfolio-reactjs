@@ -1,7 +1,11 @@
+@use '../helpers/variables' as v;
+@use '../helpers/colors' as c;
+@use '../helpers/mixins' as m;
+
 .checkout {
   padding: 4rem 0;
-  @include flex(center);
-  background: $dominant;
+  @include m.flex(center);
+  background: c.$dominant;
   &__left {
     &:hover {
       background-image: url(../../assets/active-states.jpg);
@@ -9,7 +13,7 @@
       cursor: pointer;
     }
     flex: 0.5;
-    @include flex(center);
+    @include m.flex(center);
     .content {
       p {
         padding: 1rem 0;
@@ -19,7 +23,7 @@
   }
   &__right {
     flex: 0.5;
-    @include flex(center);
+    @include m.flex(center);
     .content {
       p {
         padding: 1rem 0;

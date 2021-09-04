@@ -113,7 +113,7 @@ const Hamburger = ({ menu, close }) => {
             </NavLink>
             <NavLink
               to={{
-                pathname: 'https://www.linkedin.com/in/Abdul -malek-a095031a4/',
+                pathname: 'https://www.linkedin.com/in/zihadm654',
               }}
               target="_blank"
             >

@@ -1,7 +1,11 @@
+@use '../helpers/variables' as v;
+@use '../helpers/mixins' as m;
+@use '../helpers/colors' as c;
+
 .case__details {
   margin-top: 4rem;
   padding: 4rem 7rem;
-  @include media(sm) {
+  @include m.media(sm) {
     padding: 2.5rem;
   }
   .case__study {
@@ -10,7 +14,7 @@
       padding: 0.5rem 0;
     }
     p {
-      color: $fontColor;
+      color: c.$fontColor;
     }
   }
   .container {

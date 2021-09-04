@@ -1,17 +1,20 @@
+@use '../helpers/variables'as v;
+@use '../helpers/mixins'as m;
+@use '../helpers/colors'as c;
 .blog__page {
   margin-top: 5rem;
   padding: 4rem 8rem;
-  @include media(sm) {
+  @include m.media(sm) {
     padding: 2.5rem;
   }
   h4 {
-    color: $fontColor;
+    color: c.$fontColor;
     padding: 2rem 0;
   }
   .container {
     border-radius: 2rem;
     padding: 2rem 0;
-    @include grid;
+    @include m.grid;
     .content {
       overflow: hidden;
       border-radius: 3rem;
@@ -19,7 +22,7 @@
       grid-column: span 4;
       // background: red;
       box-shadow: 6px 16px 26px rgba(0, 0, 0, 0.212);
-      @include media(sm) {
+      @include m.media(sm) {
         grid-column: 1/13;
       }
       .blog__img {
@@ -36,12 +39,12 @@
         padding: 2rem;
         p {
           padding: 1rem 0;
-          color: $fontColor;
+          color: c.$fontColor;
         }
         .time {
-          @include flex(space-between);
+          @include m.flex(space-between);
           span {
-            color: $fontColor;
+            color: c.$fontColor;
             font-weight: 400;
           }
           padding: 0.5rem 0;
