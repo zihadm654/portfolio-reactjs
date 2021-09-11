@@ -1,6 +1,9 @@
 .project {
   padding: 6rem;
   .project__title {
+    h3 {
+      width: 24ch;
+    }
     padding: 0rem;
     margin-top: 10rem;
     p {
@@ -9,7 +12,7 @@
   }
   .personal__projects {
     padding: 4rem 0;
-    h2 {
+    h3 {
       text-align: left;
     }
   }

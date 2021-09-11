@@ -5,7 +5,6 @@ import { HiOutlineArrowRight } from 'react-icons/hi'
 import { projectsData } from "../data/projectData.js"
 
 const Cards = () => {
-  // const [project, setProject] = useState(false)
   let wrapper = useRef(null)
   useEffect(() => {
     describe(wrapper)
@@ -18,8 +17,8 @@ const Cards = () => {
         {projectsData.map((project, index) => {
           return (
             <main
-              key={index}
               ref={(el) => (wrapper = el)}
+              key={index}
               className="card__wrapper">
               <Link to={"/projects/" + project.slug} className="link">
                 <div className="image__container">

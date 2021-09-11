@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Loader from '../components/Loader'
+// import Loader from '../components/Loader'
 import Cards from '../components/Cards'
 
 const ProjectPage = () => {
@@ -8,11 +8,11 @@ const ProjectPage = () => {
   }, [])
   return (
     <section className="project">
-      <Loader />
+      {/* <Loader /> */}
       <div className="project__title">
-        <h2>
+        <h3>
           Shaping world class websites in a practical manner.
-        </h2>
+        </h3>
         <p>
           I can help you successfully take your business online while
           assisting you throughout the building process.

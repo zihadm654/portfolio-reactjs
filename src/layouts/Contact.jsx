@@ -1,9 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from "react-router-dom"
 import Button from '../helpers/Button'
+import { up } from '../helpers/Animation'
 import Footer from '../components/Footer'
+import { BsArrowUp } from 'react-icons/bs'
 const Contact = () => {
   const [info, setInfo] = useState(false)
+  let icon = useRef(null)
+  useEffect(() => {
+    up(icon)
+  }, [])
+  const elevator = () => {
+    window.scroll(0, 0)
+  }
   return (
     <>
       <section className="contact">
@@ -58,6 +67,12 @@ const Contact = () => {
               {info ? 'Reactjs Scss React-Icons Gsap Vscode' : ''}
             </p>
           </div>
+        </div>
+        <div
+          onClick={elevator}
+          ref={(el) => (icon = el)}
+          className="up">
+          <BsArrowUp />
         </div>
       </section>
       <Footer />
