@@ -178,7 +178,7 @@ export const up = (el) => {
       trigger: el,
       start: 'top 90%',
       end: 'bottom center',
-      markers: true,
+      // markers: true,
     },
   });
 };

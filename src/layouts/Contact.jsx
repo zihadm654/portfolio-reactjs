@@ -24,7 +24,7 @@ const Contact = () => {
           <Button site={'/contact'}
             className={'primary__btn'} text={'Book a free consultation'} />
           <Button site={'/contact'}
-            className={'custom__btn'} text={'or send an email me'} />
+            className={'custom__btn'} text={'send an email me'} />
         </div>
         <div className="media">
           <div className="social__media">

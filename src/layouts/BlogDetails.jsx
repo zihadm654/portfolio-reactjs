@@ -7,6 +7,7 @@ const BlogDetails = () => {
   const { slug } = useParams(null)
 
   useEffect(() => {
+    window.scroll(0, 0);
     const newArray = Blogs.find(array => array.title === slug)
     setBlog(newArray)
   }, [slug])

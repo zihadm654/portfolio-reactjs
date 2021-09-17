@@ -20,7 +20,7 @@ const Hero = () => {
         </div>
         <h5
           ref={(el) => { heading = el }}>
-          Hello,I am Abdul Malik
+          Hi, I am Abdul Malik 😃
           <svg width="40px" height="1" color="#8f00ff">
             <path fillRule="evenodd" d="M0 0h66v4H0z" />
           </svg>

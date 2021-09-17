@@ -1,16 +1,8 @@
 import React, { useEffect } from 'react';
-import emailjs from 'emailjs-com'
 import Checkout from '../components/CheckOut'
 const ContactPage = () => {
   function sendEmail(e) {
     e.preventDefault();
-
-    emailjs.sendForm('gmail654', 'template_jhmoxhp', e.target, 'user_yjL5zk7xOnpP6zwK6AKbB')
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      })
     e.target.reset();
   }
   useEffect(() => {

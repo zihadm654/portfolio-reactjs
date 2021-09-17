@@ -36,8 +36,8 @@
     color: c.$dominant;
     .circle__text {
       position: absolute;
-      top: -7%;
-      right: 1%;
+      top: -6%;
+      right: -2%;
       @include m.media(sm) {
         display: none;
       }
