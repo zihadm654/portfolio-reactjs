@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react'
-// import Loader from '../components/Loader'
 import Cards from '../components/Cards'
 
 const ProjectPage = () => {
   useEffect(() => {
     window.scroll(0, 0)
-  }, [])
+  })
   return (
     <section className="project">
-      {/* <Loader /> */}
       <div className="project__title">
         <h3>
           Shaping world class websites in a practical manner.

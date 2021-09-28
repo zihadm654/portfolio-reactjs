@@ -5,7 +5,7 @@ import { Blogs } from "../data/blogs.js"
 const BlogPage = () => {
   // const [blogs, setBlogs] = useState(null);
   useEffect(() => {
-    window.scroll(0, 0);
+    window.scroll(0, 0)
     describe(box)
   }, []);
   let box = useRef(null)
