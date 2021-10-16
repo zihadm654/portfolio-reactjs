@@ -4,7 +4,7 @@ import Slider from '../components/Slider'
 const Testimonial = () => {
   return (
     <section className="testimonial">
-      <h5>what client say about me?</h5>
+      <h3>what client say about me?</h3>
       <Slider />
     </section>)
 }

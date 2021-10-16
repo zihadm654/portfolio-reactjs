@@ -17,7 +17,7 @@ const Contact = () => {
     <>
       <section className="contact">
         <div className="contact__title">
-          <h5>Got a project?</h5>
+          <h4>Got a project?</h4>
           <h3>Let's work together</h3>
         </div>
         <div className="callaction">

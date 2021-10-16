@@ -45,10 +45,6 @@ const Describe = () => {
           </ul>
         </div>
         <p>
-          Your high-performing website will achieve this through the use of
-          intentional design and on-the-pulse marketing tactics.
-        </p>
-        <p>
           <strong>
             A good, intentional design will position you as the expert and
             authority that you know you are, conveying trust among your

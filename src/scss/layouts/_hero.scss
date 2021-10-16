@@ -27,10 +27,10 @@
       grid-column: 2/11;
     }
     @include m.media(xlg) {
-      grid-column: 2/11;
+      grid-column: 3/11;
     }
     // overflow: hidden;
-    grid-column: 2/11;
+    grid-column: 2/12;
     margin-top: 10rem;
     padding: 2.5rem 0;
     color: c.$dominant;
