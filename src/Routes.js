@@ -2,12 +2,13 @@ import React, { Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from './pages/HomePage';
 import Error from './pages/Error';
+import BlogDetails from './layouts/BlogDetails';
 const Projects = lazy(() => import('./pages/ProjectPage'));
 const About = lazy(() => import('./pages/AboutPage'));
 const Story = lazy(() => import('./pages/StoryPage'));
 const Blog = lazy(() => import('./pages/BlogPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
-const BlogDetails = lazy(() => import('./layouts/BlogDetails'));
+// const BlogDetails = lazy(() => import('./layouts/BlogDetails'));
 const CaseDetails = lazy(() => import('./layouts/CaseDetails'));
 
 const Routes = () => {

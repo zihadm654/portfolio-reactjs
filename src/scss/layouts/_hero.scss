@@ -27,17 +27,17 @@
       grid-column: 2/11;
     }
     @include m.media(xlg) {
-      grid-column: 2/11;
+      grid-column: 3/11;
     }
     // overflow: hidden;
-    grid-column: 2/11;
+    grid-column: 2/12;
     margin-top: 10rem;
     padding: 2.5rem 0;
     color: c.$dominant;
     .circle__text {
       position: absolute;
       top: -6%;
-      right: -2%;
+      right: 0%;
       @include m.media(sm) {
         display: none;
       }
@@ -45,8 +45,8 @@
         right: -20%;
       }
       img {
-        height: 14rem;
-        width: 14rem;
+        height: 12rem;
+        width: 12rem;
         animation: rotate 4s linear infinite;
       }
     }

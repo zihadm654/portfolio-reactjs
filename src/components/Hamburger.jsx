@@ -20,6 +20,7 @@ const Hamburger = ({ menu, close }) => {
   let list5 = useRef(null)
 
   useEffect(() => {
+    window.scroll(0, 0)
     if (menu) {
       gsap.to(burger, {
         duration: 1,

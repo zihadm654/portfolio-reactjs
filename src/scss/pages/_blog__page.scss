@@ -1,9 +1,9 @@
-@use '../helpers/variables'as v;
-@use '../helpers/mixins'as m;
-@use '../helpers/colors'as c;
+@use '../helpers/variables' as v;
+@use '../helpers/mixins' as m;
+@use '../helpers/colors' as c;
 .blog__page {
   margin-top: 5rem;
-  padding: 4rem 8rem;
+  padding: 4rem 16rem;
   @include m.media(sm) {
     padding: 2.5rem;
   }
@@ -15,11 +15,12 @@
     border-radius: 2rem;
     padding: 2rem 0;
     @include m.grid;
+    gap: 4rem;
     .content {
       overflow: hidden;
       border-radius: 3rem;
       border: none;
-      grid-column: span 4;
+      grid-column: span 6;
       // background: red;
       box-shadow: 6px 16px 26px rgba(0, 0, 0, 0.212);
       @include m.media(sm) {
@@ -36,22 +37,11 @@
         }
       }
       .description {
-        padding: 2rem;
+        padding: 1.5rem;
         p {
-          padding: 1rem 0;
-          color: c.$fontColor;
-        }
-        .time {
-          @include m.flex(space-between);
-          span {
-            color: c.$fontColor;
-            font-weight: 400;
-          }
           padding: 0.5rem 0;
+          // color: c.$fontColor;
         }
-      }
-      h5 {
-        font-weight: 600;
       }
     }
   }

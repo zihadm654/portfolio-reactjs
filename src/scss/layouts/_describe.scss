@@ -18,9 +18,9 @@
     grid-column: span 6;
     h2 {
       font-weight: 400;
-      font-size: v.$sbtl;
-      line-height: 6.5rem;
-      padding-bottom: 2.7rem;
+      // font-size: v.$sbtl;
+      // line-height: 6.5rem;
+      // padding-bottom: 2.7rem;
     }
     h4 {
       padding: 2rem 0;
@@ -36,7 +36,7 @@
     }
     .line__img {
       padding: 1rem 0;
-      gap: 2rem;
+      gap: 3rem;
       @include m.flex(space-evenly);
       img {
         height: 5em;

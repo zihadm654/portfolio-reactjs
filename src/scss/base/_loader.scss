@@ -20,22 +20,5 @@
       color: #fff;
       margin-right: 5rem;
     }
-    .wordmill {
-      position: relative;
-      width: 43rem;
-      height: 10rem;
-      span {
-        @include m.media(sm) {
-          padding: 2rem 0;
-        }
-        text-align: left;
-        opacity: 0;
-        top: 54%;
-        font-size: v.$lr;
-        font-weight: 500;
-        position: absolute;
-        color: #fff;
-      }
-    }
   }
 }
