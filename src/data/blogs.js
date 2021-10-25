@@ -1,3 +1,6 @@
+import img1 from '../assets/basicux-01.jpg';
+import img2 from '../assets/MacBook - 1.jpg';
+import img3 from '../assets/MacBook - 2copy.jpg';
 export const Blogs = [
   {
     id: 1,
@@ -5,6 +8,7 @@ export const Blogs = [
     place: 'Washinton D.C',
     breif:
       "if you are a vscode user you might have know or heard about all the tips & tricks. Let's take a look at these thing",
+    img: img1,
     descriptions: [
       {
         id: 'topic1',
@@ -39,6 +43,7 @@ export const Blogs = [
     place: 'jercy usa',
     breif:
       "if you are a vscode user you might have know or heard about all the tips & tricks. Let's take a look at these thing",
+    img: img2,
     descriptions: [
       {
         id: 'topic1',
@@ -73,6 +78,7 @@ export const Blogs = [
     place: 'jercy usa',
     breif:
       "if you are a vscode user you might have know or heard about all the tips & tricks. Let's take a look at these thing",
+    img: img3,
     descriptions: [
       {
         id: 'topic1',

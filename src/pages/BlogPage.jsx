@@ -5,9 +5,9 @@ import { Blogs } from "../data/blogs.js"
 const BlogPage = () => {
   // const [blogs, setBlogs] = useState(null);
   useEffect(() => {
-    window.scroll(0, 0);
+    window.scroll(0, 0)
     describe(box)
-  }, []);
+  });
   let box = useRef(null)
   return (
     <div className="blog__page">
@@ -24,11 +24,11 @@ const BlogPage = () => {
                 <img src={blog.img} alt={blog.img} />
               </div>
               <div className="description">
-                <h5 >{blog.title}</h5>
-                <p>{blog.breif}</p>
+                <p >{blog.title}</p>
+                {/* <p>{blog.breif}</p> */}
                 <div className="time">
-                  <span>May 12th, 2020</span>
-                  <span>{blog.place}</span>
+                  {/* <span>May 12th, 2020</span> */}
+                  {/* <span>{blog.place}</span> */}
                 </div>
               </div>
             </Link>

@@ -42,25 +42,24 @@ export const HorizontalScroll = (el) => {
   );
 };
 export const textIntro = (el) => {
-  TweenMax.staggerFrom(
-    el,
-    0.7,
-    {
-      opacity: 0,
-      y: 50,
-      delay: 0.4,
-      ease: Power3.easeOut,
+  TweenMax.staggerFrom(el, 0.7, {
+    opacity: 0,
+    y: 50,
+    delay: 0.4,
+    ease: Power3.easeOut,
+    stagger: {
+      amount: 0.5,
     },
-    0.5
-  );
+  });
 };
 export const Links = (el) => {
-  TweenMax.staggerFrom(
-    el,
-    0.7,
-    { opacity: 0, delay: 0.7, y: 60, ease: Power3.easeOut },
-    0.1
-  );
+  TweenMax.staggerFrom(el, 0.7, {
+    opacity: 0,
+    delay: 0.7,
+    y: 60,
+    ease: Power3.easeOut,
+    stagger: { amount: 0.1 },
+  });
 };
 export const describe = (el) => {
   TweenMax.from(el, 0.5, {
@@ -76,21 +75,17 @@ export const describe = (el) => {
   });
 };
 export const cardAni = (el) => {
-  TweenMax.staggerFrom(
-    el,
-    1,
-    {
-      opacity: 0,
-      x: 30,
-      ease: Power3.inOut,
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 90%',
-        end: 'bottom center',
-      },
+  TweenMax.staggerFrom(el, 1, {
+    opacity: 0,
+    x: 30,
+    ease: Power3.inOut,
+    scrollTrigger: {
+      trigger: el,
+      start: 'top 90%',
+      end: 'bottom center',
     },
-    1.2
-  );
+    stagger: { amount: 0.1 },
+  });
 };
 // OPEN MENU
 export const staggerReveal = (node1, node2) => {
@@ -149,26 +144,27 @@ export const loaderAni = (el) => {
     1.5,
     {
       y: 0,
-      delay: 0.5,
     },
     {
+      delay: 0.5,
       opacity: 0,
-      y: -45,
-      ease: Power3.inOut,
-    },
-    0.9
+      y: -60,
+      ease: Power3.easeOut,
+      stagger: {
+        amount: 0.8,
+      },
+    }
   );
 };
 export const blink = (el) => {
-  TweenMax.staggerTo(
-    el,
-    0.9,
-    {
-      ease: 'power3.easeOut',
-      opacity: 1,
+  TweenMax.staggerTo(el, 1, {
+    delay: 0.1,
+    ease: 'power3.easeOut',
+    opacity: 1,
+    stagger: {
+      amount: 0.7,
     },
-    0.9
-  );
+  });
 };
 export const up = (el) => {
   TweenMax.from(el, 1, {

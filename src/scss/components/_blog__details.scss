@@ -11,6 +11,18 @@
     h4 {
       font-weight: 600;
     }
+    .time {
+      h5 {
+        margin-right: 1rem;
+        font-weight: 500;
+      }
+      @include m.flex(left);
+      span {
+        font-size: v.$sm;
+        font-weight: 400;
+        color: gray;
+      }
+    }
     .img__container {
       padding-top: 2rem;
       height: 45rem;

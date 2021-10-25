@@ -12,13 +12,12 @@ const Cards = () => {
   }, [])
   return (
     <div className="project__container">
-
       <div className="cards">
         {projectsData.map((project, index) => {
           return (
             <main
-              ref={(el) => (wrapper = el)}
               key={index}
+              ref={(el) => (wrapper = el)}
               className="card__wrapper">
               <Link to={"/projects/" + project.slug} className="link">
                 <div className="image__container">

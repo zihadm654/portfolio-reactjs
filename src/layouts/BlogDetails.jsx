@@ -17,14 +17,15 @@ const BlogDetails = () => {
     <div className="blog__details">
       <article>
         <h4>{blog.title}</h4>
+        <div className="time">
+          <h5>Abdul malik</h5>
+          <span>{blog.place}</span>
+          <span>2 May, 2020</span>
+        </div>
         <div className="img__container">
           <img src={blog.img} alt={blog.authorImg} />
         </div>
         <div className="description">
-          <div className="time">
-            <h5>{blog.place}-</h5>
-            <span>2 May, 2033</span>
-          </div>
           <h5>{blog.breif}</h5>
         </div>
         {blog.descriptions.map((desc, index) => {
