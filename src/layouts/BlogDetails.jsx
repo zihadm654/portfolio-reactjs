@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Blogs } from "../data/blogs.js"
 
-const BlogDetails = () => {
+const BlogDetails = (props) => {
+  // const blogDetails = props.location.state || {};
   const [blog, setBlog] = useState(null);
   const { slug } = useParams(null)
-
+  // console.log(blogDetails);
   useEffect(() => {
     window.scroll(0, 0);
     const newArray = Blogs.find(array => array.title === slug)
