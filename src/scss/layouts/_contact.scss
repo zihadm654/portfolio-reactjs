@@ -19,6 +19,10 @@
     justify-content: center;
     grid-column: 1/13;
     @include m.flex(space-evenly);
+    gap: 5rem;
+    @include m.media(sm) {
+      gap: 2rem;
+    }
   }
   .media {
     grid-column: 1/13;

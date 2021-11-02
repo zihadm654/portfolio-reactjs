@@ -1,43 +1,44 @@
-import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import { Blogs } from "../data/blogs.js"
-
-const BlogDetails = (props) => {
-  // const blogDetails = props.location.state || {};
-  const [blog, setBlog] = useState(null);
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { useState, useEffect } from 'react'
+import { db } from '../firebase.js';
+import { useParams } from 'react-router';
+const BlogDetails = () => {
+  const [blog, setBlog] = useState([]);
   const { slug } = useParams(null)
-  // console.log(blogDetails);
   useEffect(() => {
+    const blogRef = collection(db, "posts")
+    const q = query(blogRef, where("title", "==", slug))
+    const specificBlog = async () => {
+      const querySnapshot = await getDocs(q)
+      querySnapshot.forEach(doc => {
+        console.log(doc.id, "=>", doc.data());
+      })
+    }
+    specificBlog();
+    // setBlog(specificBlog)
     window.scroll(0, 0);
-    const newArray = Blogs.find(array => array.title === slug)
-    setBlog(newArray)
   }, [slug])
-
   if (!blog) return <div>Loading...</div>
   return (
     <div className="blog__details">
-      <article>
-        <h4>{blog.title}</h4>
-        <div className="time">
-          <h5>Abdul malik</h5>
-          <span>{blog.place}</span>
-          <span>2 May, 2020</span>
-        </div>
-        <div className="img__container">
-          <img src={blog.img} alt={blog.authorImg} />
-        </div>
-        <div className="description">
-          <h5>{blog.breif}</h5>
-        </div>
-        {blog.descriptions.map((desc, index) => {
-          return (
-            <article key={index}>
-              <h5>{desc.title}</h5>
-              <p >{desc.description}</p>
-            </article>
-          )
-        })}
-      </article>
+      {blog && blog.map(item => (
+        <article key={item.title}>
+          <div className="img__container">
+            {/* <img src={blog.img} alt={blog.authorImg} /> */}
+          </div>
+          <h4>{item.title}</h4>
+          <div className="time">
+            <h5>{item.author}</h5>
+            <span>{item.place}</span>
+            <span>2 May, 2020</span>
+          </div>
+          <div className="description">
+            <h5>{item.brief}</h5>
+          </div>
+          <h5>{item.desc.article1.title}</h5>
+          <p>{item.desc.article1.body}</p>
+        </article>
+      ))}
       <div className="conclution">
         <h4>Conclusion:-</h4>
         <p>Learn by breaking things into parts and enjoying that you are doing that is the effective way to get going with programming. Because without understanding it you can't go long way. So, have fun</p>
