@@ -1,25 +1,28 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { describe } from "../helpers/Animation"
-import { db } from "../firebase.js"
+import { db, storage } from "../firebase.js"
 import { collection, onSnapshot } from "firebase/firestore";
 const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
+  console.log(storage);
   useEffect(() => {
     onSnapshot(collection(db, "posts"), (snapshot) => {
       setBlogs(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+      setLoading(false)
     })
     window.scroll(0, 0)
     // describe(box)
   }, []);
+  if (loading) return <p>fetching data from firebase....</p>
   // let box = useRef(null)
   return (
     <div className="blog__page">
       <h4>Welcome to my personal blog</h4>
       <div
         className="container">
-        {blogs.map((blog) => (
+        {!blogs ? loading : blogs.map((blog) => (
           <article
             // ref={(el) => (box = el)}
             key={blog.id}

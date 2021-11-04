@@ -2,41 +2,56 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 import { useState, useEffect } from 'react'
 import { db } from '../firebase.js';
 import { useParams } from 'react-router';
+
 const BlogDetails = () => {
   const [blog, setBlog] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { slug } = useParams(null)
+
   useEffect(() => {
     const blogRef = collection(db, "posts")
     const q = query(blogRef, where("title", "==", slug))
+    const post = [];
     const specificBlog = async () => {
       const querySnapshot = await getDocs(q)
       querySnapshot.forEach(doc => {
-        console.log(doc.id, "=>", doc.data());
+        post.push({
+          ...doc.data(),
+          id: doc.id
+        })
       })
+      setBlog(post)
+      setLoading(false)
     }
     specificBlog();
-    // setBlog(specificBlog)
     window.scroll(0, 0);
   }, [slug])
-  if (!blog) return <div>Loading...</div>
+  if (loading) {
+    return <p>fetching data from firebase</p>
+  }
+  // console.log(blog.map(item => item.desc.map()));
   return (
     <div className="blog__details">
-      {blog && blog.map(item => (
+      {!blog ? loading : blog.map(item => (
         <article key={item.title}>
           <div className="img__container">
             {/* <img src={blog.img} alt={blog.authorImg} /> */}
           </div>
           <h4>{item.title}</h4>
           <div className="time">
-            <h5>{item.author}</h5>
+            <p>{item.author}</p>
             <span>{item.place}</span>
-            <span>2 May, 2020</span>
+            {/* <span>{item.time}</span> */}
           </div>
           <div className="description">
             <h5>{item.brief}</h5>
+            {/* {item.desc.map(article => (
+              <article key={article.title}>
+                <h5>{article.title}</h5>
+                <p>{article.body}</p>
+              </article>
+            ))} */}
           </div>
-          <h5>{item.desc.article1.title}</h5>
-          <p>{item.desc.article1.body}</p>
         </article>
       ))}
       <div className="conclution">

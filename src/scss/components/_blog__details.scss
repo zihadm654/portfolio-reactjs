@@ -12,15 +12,15 @@
       font-weight: 600;
     }
     .time {
-      h5 {
+      color: gray;
+      p {
         margin-right: 1rem;
-        font-weight: 500;
+        font-weight: 400;
       }
       @include m.flex(left);
       span {
         font-size: v.$sm;
         font-weight: 400;
-        color: gray;
       }
     }
     .img__container {
@@ -37,6 +37,8 @@
       padding-top: 2rem;
       h5 {
         font-weight: 500;
+      }
+      article {
       }
       .author__container {
         padding-bottom: 1rem;
