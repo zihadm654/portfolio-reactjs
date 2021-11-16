@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { describe } from "../helpers/Animation"
-import { db, storage } from "../firebase.js"
+import { db } from "../firebase.js"
 import { collection, onSnapshot } from "firebase/firestore";
+
 const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
-  console.log(storage);
+  // console.log(storage);
   useEffect(() => {
     onSnapshot(collection(db, "posts"), (snapshot) => {
       setBlogs(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })));

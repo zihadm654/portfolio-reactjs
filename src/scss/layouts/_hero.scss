@@ -51,14 +51,17 @@
       }
     }
     h1 {
+      height: 30.4rem;
       padding: 1.5rem 0;
       overflow: hidden;
     }
     h5 {
+      height: 2.5rem;
       overflow: hidden;
       @include m.flex(space-around);
     }
     p {
+      height: 2.5rem;
       overflow: hidden;
     }
     .primary__btn {

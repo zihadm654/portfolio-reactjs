@@ -16,7 +16,7 @@ import CheckOut from '../components/CheckOut'
 const AboutPage = () => {
   useEffect(() => {
     window.scroll(0, 0)
-  })
+  }, [])
   return (
     <section className="about__page">
       <div className="about__description">

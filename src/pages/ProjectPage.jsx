@@ -4,7 +4,7 @@ import Cards from '../components/Cards'
 const ProjectPage = () => {
   useEffect(() => {
     window.scroll(0, 0)
-  })
+  }, [])
   return (
     <section className="project">
       <div className="project__title">

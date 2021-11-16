@@ -42,18 +42,18 @@ export const HorizontalScroll = (el) => {
   );
 };
 export const textIntro = (el) => {
-  TweenMax.staggerFrom(el, 0.7, {
+  gsap.from(el, 0.8, {
     opacity: 0,
-    y: 50,
+    y: 64,
     delay: 0.4,
     ease: Power3.easeOut,
     stagger: {
-      amount: 0.5,
+      amount: 0.15,
     },
   });
 };
 export const Links = (el) => {
-  TweenMax.staggerFrom(el, 0.7, {
+  TweenMax.from(el, 0.7, {
     opacity: 0,
     delay: 0.7,
     y: 60,
@@ -75,7 +75,7 @@ export const describe = (el) => {
   });
 };
 export const cardAni = (el) => {
-  TweenMax.staggerFrom(el, 1, {
+  TweenMax.from(el, 1, {
     opacity: 0,
     x: 30,
     ease: Power3.inOut,
@@ -108,7 +108,7 @@ export const staggerRevealClose = (node1, node2) => {
     height: 0,
     ease: 'power3.inOut',
     stagger: {
-      amount: 0.03,
+      amount: 0.1,
     },
   });
 };
