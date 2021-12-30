@@ -12,7 +12,7 @@ import {
   SiFirebase,
 } from 'react-icons/si'
 import CheckOut from '../components/CheckOut'
-
+import Testimonial from "../layouts/Testimonial"
 const AboutPage = () => {
   useEffect(() => {
     window.scroll(0, 0)
@@ -70,6 +70,7 @@ const AboutPage = () => {
           <h4>VS code / Firebase / Figma / Pen & paper / Type Scaler / Google fonts</h4>
         </div>
       </div>
+      <Testimonial />
       <div className="experience">
         <h5>EXPERIENCE</h5>
         <h3>Over 3 years of experience</h3>
@@ -77,7 +78,7 @@ const AboutPage = () => {
           I’ve been lucky enough to establish relationships with amazing clients
           from all over the world, ranging from individual clients, through
           up-and-coming startups, to multinational companies. For more details,
-          head over to my<span> LinkedIn profile</span>.
+          head over to my <a href="https://www.linkedin.com/in/zihadm654">Linkedin profile</a>
         </p>
       </div>
       <CheckOut />

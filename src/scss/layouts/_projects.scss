@@ -3,6 +3,8 @@
 .project {
   position: relative;
   padding: 4rem 8rem;
+  @include m.flex(center);
+  flex-direction: column;
   @include m.media(sm) {
     padding: 2.5rem;
   }
@@ -18,11 +20,5 @@
     p {
       width: 50ch;
     }
-  }
-  button {
-    position: absolute;
-    margin: 0;
-    bottom: -4rem;
-    left: 40%;
   }
 }

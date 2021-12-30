@@ -39,7 +39,7 @@ const Header = () => {
               onClick={handleClick}
             >
               <p>{menu ? "menu" : "close"}</p>
-              <div>{menu ? <GiHamburgerMenu style={{ fontSize: "2rem" }} /> : <MdClose style={{ fontSize: "2rem" }} />}</div>
+              <div>{menu ? <GiHamburgerMenu style={{ fontSize: "2.5rem" }} /> : <MdClose style={{ fontSize: "2.5rem" }} />}</div>
             </div>
           </div>
         </div>

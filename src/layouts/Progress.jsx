@@ -15,8 +15,8 @@ const Progress = () => {
       <div className="progress__description">
         <h5 ref={(el) => (Title = el)}
         >How i go with projects?</h5>
-        <h2 ref={(el) => (subtitle = el)}
-        >Going beyond what’s possible</h2>
+        <h3 ref={(el) => (subtitle = el)}
+        >Going beyond what’s possible</h3>
         <div ref={(el) => (content = el)}
           className="list">
           <h4>

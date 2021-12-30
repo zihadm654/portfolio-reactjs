@@ -39,6 +39,16 @@
       letter-spacing: 0.079rem;
     }
   }
+  .experience {
+    margin-top: 0rem;
+    padding: 4rem 0;
+    a {
+      font-size: v.$p;
+      color: #000;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
   .html,
   .git {
     color: orangered;

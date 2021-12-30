@@ -17,6 +17,9 @@
     height: 100%;
     width: 100%;
     clip-path: circle(20vw at 10% 56%);
+    @include m.media(sm) {
+      clip-path: circle(50vw at 13% 39%);
+    }
   }
   .hero__container {
     position: relative;
@@ -29,7 +32,6 @@
     @include m.media(xlg) {
       grid-column: 2/12;
     }
-    // overflow: hidden;
     grid-column: 2/13;
     margin-top: 10rem;
     padding: 2.5rem 0;
@@ -51,18 +53,10 @@
       }
     }
     h1 {
-      height: 30.4rem;
       padding: 1.5rem 0;
-      overflow: hidden;
     }
     h5 {
-      height: 2.5rem;
-      overflow: hidden;
       @include m.flex(space-around);
-    }
-    p {
-      height: 2.5rem;
-      overflow: hidden;
     }
     .primary__btn {
       margin-top: 5rem;

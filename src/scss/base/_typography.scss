@@ -1,8 +1,12 @@
 @use '../helpers/variables' as v;
+@use '../helpers/mixins' as m;
 h1 {
   font-size: v.$xxlr;
   font-weight: 700;
   line-height: 1;
+  @include m.media(sm) {
+    font-size: v.$sbtl;
+  }
 }
 h2 {
   letter-spacing: 0.02rem;

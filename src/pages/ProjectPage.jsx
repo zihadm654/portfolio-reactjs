@@ -6,8 +6,8 @@ const ProjectPage = () => {
     window.scroll(0, 0)
   }, [])
   return (
-    <section className="project">
-      <div className="project__title">
+    <section className="projects">
+      <div className="projects__title">
         <h3>
           Shaping world class websites in a practical manner.
         </h3>
@@ -16,7 +16,7 @@ const ProjectPage = () => {
           assisting you throughout the building process.
         </p>
       </div>
-      <h3>Featured project</h3>
+      <h3>Featured projects</h3>
       <Cards />
     </section>
   )

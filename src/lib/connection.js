@@ -1,4 +1,4 @@
-const { MongoClient } = require('mongodb');
+const { MongoClient, Collection } = require('mongodb');
 
 async function main() {
   const uri =
@@ -9,8 +9,9 @@ async function main() {
     await client.connect();
     console.log('mongo is connected');
     // Make the appropriate DB calls
-    // await client.db(Collection, 'listing');
-    await listDatabases(client);
+    await client.db(Collection, 'datum').admin().listDatabases();
+
+    await findByName(client, 'Infinite Views');
   } catch (e) {
     console.error(e);
   } finally {
@@ -22,15 +23,21 @@ async function main() {
 
 main().catch(console.error);
 
-// const db = () => {
-//   if (getDb) return getDb;
-// };
-// console.log(db);
-
-async function listDatabases(client) {
-  const databasesList = await client.db().admin().listDatabases();
-  console.log('databases:');
-  databasesList.databases.forEach((db) => {
-    console.log(`- ${db.name}`);
-  });
+// async function listDatabases(client) {
+//   const databasesList = await client.db().admin().listDatabases();
+//   console.log('databases:');
+//   databasesList.databases.forEach((db) => {
+//     console.log(`- ${db.name}`);
+//   });
+// }
+async function findByName(client, nameOfListing) {
+  const result = await client
+    .db('portfolioData')
+    .collection('datum')
+    .findOne({ author: nameOfListing });
+  if (result) {
+    console.log(`Found a listing in the database${nameOfListing}`);
+  } else {
+    console.log('nothing is found');
+  }
 }

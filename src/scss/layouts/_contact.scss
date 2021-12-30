@@ -1,5 +1,6 @@
 @use '../helpers/variables' as v;
 @use '../helpers/mixins' as m;
+@use '../helpers/colors' as c;
 
 .contact {
   position: relative;
@@ -70,14 +71,20 @@
     }
   }
   .up {
+    height: 4rem;
+    width: 4rem;
     cursor: pointer;
     opacity: 1;
     position: absolute;
     bottom: 10%;
     right: 3%;
-    z-index: 1000;
+    z-index: 11;
+    border-radius: 50%;
+    background: rgba(15, 20, 30, 0.3);
+    @include m.flex(center);
     svg {
       font-size: 3rem;
+      color: #fff;
     }
   }
 }

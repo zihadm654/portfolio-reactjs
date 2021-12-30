@@ -6,9 +6,11 @@
   padding: 4rem 8rem;
   @include m.media(sm) {
     padding: 4rem 2rem;
+    gap: 4rem;
   }
   @include m.media(md) {
     padding: 3rem;
+    gap: 4rem;
   }
   @include m.grid;
   .skills__description {

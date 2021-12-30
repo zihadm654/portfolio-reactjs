@@ -107,6 +107,7 @@ export const staggerRevealClose = (node1, node2) => {
     duration: 0.8,
     height: 0,
     ease: 'power3.inOut',
+    transformOrigin: 'right top',
     stagger: {
       amount: 0.1,
     },

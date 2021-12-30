@@ -4,7 +4,6 @@ import Describe from '../layouts/Describe'
 import Projects from '../layouts/Projects'
 import Progress from '../layouts/Progress'
 import Skills from '../layouts/Skills'
-import Testimonial from '../layouts/Testimonial'
 import About from '../layouts/About'
 const HomePage = () => {
   useEffect(() => {
@@ -15,7 +14,6 @@ const HomePage = () => {
       <Hero />
       <Describe />
       <Projects />
-      <Testimonial />
       <Progress />
       <Skills />
       <About />

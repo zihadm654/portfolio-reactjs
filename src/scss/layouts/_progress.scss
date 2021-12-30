@@ -14,15 +14,17 @@
     h5 {
       color: c.$fontColor;
     }
-    h2 {
+    h3 {
       padding-top: 0.6rem;
       color: c.$dominant;
     }
     .list {
-      min-height: 20rem;
       @include m.flex(space-evenly);
-      padding: 3rem 2rem;
+      padding: 6rem 2rem;
+      @include m.media(sm) {
+      }
       span {
+        padding: 0 0.8rem;
         .line {
           @include m.media(sm) {
             width: 2.6rem;
@@ -32,7 +34,7 @@
     }
     h4 {
       @include m.media(sm) {
-        font-size: v.$p;
+        font-size: v.$md;
       }
     }
     p {

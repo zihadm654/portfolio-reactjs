@@ -1,8 +1,3 @@
-@use '../helpers/mixins' as m;
 .testimonial {
-  padding: 4rem 8rem;
-  margin-top: 8rem;
-  @include m.media(sm) {
-    padding: 2.5rem;
-  }
+  padding: 3rem 0;
 }

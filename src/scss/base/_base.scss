@@ -22,7 +22,7 @@
 }
 html {
   scroll-behavior: smooth;
-  font-size: 70%;
+  font-size: 66%;
   @include m.media(sm) {
     font-size: 37.51%;
   }
@@ -33,7 +33,7 @@ html {
     font-size: 56.25%;
   }
   @include m.media(xlg) {
-    font-size: 64.5%;
+    font-size: 62.5%;
   }
 }
 body {

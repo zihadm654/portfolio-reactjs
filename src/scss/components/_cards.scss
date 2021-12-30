@@ -10,7 +10,7 @@
     padding: 3rem 0;
   }
   @include m.media(sm) {
-    padding: 2rem 0;
+    padding: 3rem 0;
   }
   .card__wrapper {
     position: relative;
@@ -20,6 +20,7 @@
     @include m.media(sm) {
       grid-column: 1/13;
     }
+    padding: 1rem 0;
     grid-column: span 6;
     text-align: left;
     position: relative;
