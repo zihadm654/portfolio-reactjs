@@ -16,26 +16,25 @@
 header {
   .inner__header {
     @include m.media(sm) {
-      padding: 5rem 2.5rem 4rem 2.5rem;
+      padding: 2.5rem;
     }
     @include m.media(md) {
       padding: 2.5rem 3.7rem;
     }
-    height: 7rem;
     width: 100%;
     z-index: 10000;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 0 8rem;
+    padding: 2rem 8rem;
     @include m.flex(space-between);
     a {
       z-index: 10;
       .logo {
         @include m.flex(center);
         img {
-          height: 4rem;
-          width: 4rem;
+          height: 3.5rem;
+          width: 3.5rem;
         }
         &:hover {
           cursor: pointer;
@@ -43,7 +42,6 @@ header {
         h4 {
           font-size: v.$lr;
           padding-left: 1rem;
-          padding-bottom: 0.5rem;
           font-family: v.$title-font;
         }
       }

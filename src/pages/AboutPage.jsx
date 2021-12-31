@@ -12,7 +12,7 @@ import {
   SiFirebase,
 } from 'react-icons/si'
 import CheckOut from '../components/CheckOut'
-import Testimonial from "../layouts/Testimonial"
+import Testimonial from "../components/Testimonial"
 const AboutPage = () => {
   useEffect(() => {
     window.scroll(0, 0)

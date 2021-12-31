@@ -1,34 +1,40 @@
-import { gsap, TweenMax, Power3 } from 'gsap';
+import { gsap, Power3 } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+
 export const screenAnimation = (el) => {
-  TweenMax.from(el, {
-    duration: 2.5,
-    css: { height: '100%', display: 'block' },
+  gsap.from(el, {
+    duration: 0.8,
+    height: 0,
+    transformOrigin: 'right top',
+    skewY: 2,
     ease: Power3.easeOut,
   });
 };
 export const VerticalScroll = (el) => {
-  TweenMax.from(el, 1, {
-    delay: 1.8,
+  gsap.from(el, 0.8, {
+    delay: 0.1,
     opacity: 0,
-    y: -30,
-    ease: Power3.inOut,
+    y: 40,
+    ease: Power3.easeOut,
+    scrollTrigger: {
+      trigger: el,
+      start: 'top 90%',
+      end: 'bottom center',
+    },
+    stagger: {
+      amount: 0.4,
+    },
   });
 };
 export const HorizontalScroll = (el) => {
-  TweenMax.fromTo(
+  gsap.fromTo(
     el,
     1,
     {
       width: '0%',
       delay: 0.1,
       ease: Power3.easeOut,
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 90%',
-        end: 'bottom center',
-      },
     },
     {
       ease: Power3.easeOut,
@@ -48,25 +54,19 @@ export const textIntro = (el) => {
     delay: 0.4,
     ease: Power3.easeOut,
     stagger: {
-      amount: 0.15,
+      amount: 0.6,
     },
   });
 };
-export const Links = (el) => {
-  TweenMax.from(el, 0.7, {
+export const fadeIn = (el) => {
+  gsap.from(el, 0.8, {
     opacity: 0,
-    delay: 0.7,
-    y: 60,
-    ease: Power3.easeOut,
-    stagger: { amount: 0.1 },
-  });
-};
-export const describe = (el) => {
-  TweenMax.from(el, 0.5, {
-    opacity: 0,
-    y: 50,
+    delay: 0.1,
+    y: 63,
     ease: Power3.inOut,
-    scale: 0.99,
+    stagger: {
+      amount: 0.4,
+    },
     scrollTrigger: {
       trigger: el,
       start: 'top 85%',
@@ -74,17 +74,26 @@ export const describe = (el) => {
     },
   });
 };
-export const cardAni = (el) => {
-  TweenMax.from(el, 1, {
+export const Links = (el) => {
+  gsap.from(el, 0.7, {
     opacity: 0,
-    x: 30,
-    ease: Power3.inOut,
+    delay: 0.7,
+    y: 60,
+    ease: Power3.easeOut,
+    stagger: { amount: 0.1 },
+  });
+};
+export const cardAni = (el) => {
+  gsap.from(el, 1, {
+    opacity: 0,
+    x: 50,
+    ease: Power3.easeOut,
     scrollTrigger: {
       trigger: el,
       start: 'top 90%',
       end: 'bottom center',
     },
-    stagger: { amount: 0.1 },
+    stagger: { amount: 0.7 },
   });
 };
 // OPEN MENU
@@ -94,7 +103,7 @@ export const staggerReveal = (node1, node2) => {
     height: 0,
     transformOrigin: 'right top',
     skewY: 2,
-    ease: 'power3.inOut',
+    ease: 'power3.easeOut',
     stagger: {
       amount: 0.1,
     },
@@ -106,7 +115,7 @@ export const staggerRevealClose = (node1, node2) => {
   gsap.to([node1, node2], {
     duration: 0.8,
     height: 0,
-    ease: 'power3.inOut',
+    ease: 'power3.easeOut',
     transformOrigin: 'right top',
     stagger: {
       amount: 0.1,
@@ -120,7 +129,7 @@ export const staggerText = (node1, node2, node3) => {
     duration: 0.8,
     y: 100,
     delay: 0.1,
-    ease: 'power3.inOut',
+    ease: Power3.easeOut,
     stagger: {
       amount: 0.3,
     },
@@ -140,42 +149,48 @@ export const fadeInUp = (node) => {
 
 // work windmill
 export const loaderAni = (el) => {
-  TweenMax.staggerFromTo(
+  gsap.to(el, 1, {
+    delay: 0.2,
+    opacity: 0,
+    y: -60,
+    ease: Power3.easeOut,
+    stagger: {
+      amount: 0.8,
+    },
+  });
+};
+export const blink = (el) => {
+  gsap.fromTo(
     el,
-    1.5,
+    1,
     {
-      y: 0,
+      delay: 0.3,
+      opacity: 1,
+      ease: 'power3.easeOut',
+      stagger: {
+        amount: 0.8,
+      },
     },
     {
-      delay: 0.5,
+      delay: 0.3,
+      ease: 'power3.easeOut',
       opacity: 0,
-      y: -60,
-      ease: Power3.easeOut,
       stagger: {
         amount: 0.8,
       },
     }
   );
 };
-export const blink = (el) => {
-  TweenMax.staggerTo(el, 1, {
-    delay: 0.1,
+export const up = (el) => {
+  gsap.to(el, 1, {
     ease: 'power3.easeOut',
     opacity: 1,
-    stagger: {
-      amount: 0.7,
-    },
-  });
-};
-export const up = (el) => {
-  TweenMax.from(el, 1, {
-    ease: 'power3.easeOut',
-    opacity: 0,
     scrollTrigger: {
       trigger: el,
-      start: 'top 90%',
+      start: 'top 85%',
       end: 'bottom center',
-      // markers: true,
+      triggerAction: 'play none none none',
+      scrub: 0.5,
     },
   });
 };

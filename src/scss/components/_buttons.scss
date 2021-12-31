@@ -66,10 +66,14 @@ a {
   }
   &:hover {
     cursor: pointer;
+    .icon {
+      margin-left: 2rem;
+    }
   }
   .icon {
     margin-left: 1rem;
     font-size: 2rem;
+    transition: margin-left 200ms ease-out;
   }
 }
 .custom__btn {

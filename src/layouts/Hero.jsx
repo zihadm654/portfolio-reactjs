@@ -48,7 +48,8 @@ const Hero = () => {
         </p>
         <Button
           site={"/contact"}
-          className='primary__btn' text='contact with me' />
+          className='primary__btn' text='contact with me'
+        />
       </div>
     </section>
   )

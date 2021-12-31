@@ -1,6 +1,6 @@
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { useState, useEffect } from 'react'
-import { db } from '../firebase.js';
+import { db } from '../lib/firebase';
 import { useParams } from 'react-router';
 
 const BlogDetails = () => {

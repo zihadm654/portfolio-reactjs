@@ -1,14 +1,13 @@
 import React, { useRef, useEffect } from 'react'
 import Button from '../helpers/Button'
 import Cards from '../components/Cards'
-import { describe } from "../helpers/Animation"
+import { fadeIn } from "../helpers/Animation"
 
 const Projects = () => {
   let title = useRef(null)
   let subTitle = useRef(null)
   useEffect(() => {
-    describe([title, subTitle])
-    window.scroll(0, 0)
+    fadeIn([title, subTitle])
   }, [])
   return (
     <section

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { CgMenuRight } from 'react-icons/cg'
 import { MdClose } from "react-icons/md"
 import Logo from '../assets/logo.png'
 import Hamburger from './Hamburger'
@@ -12,6 +12,9 @@ const Header = () => {
   const [menu, setMenu] = useState(true)
   const handleClick = () => {
     menu ? setMenu(prev => !prev) : setMenu(prev => !prev)
+    if (menu) {
+
+    }
   }
   const [sticky, setSticky] = useState(false)
   const stickyNav = () => {
@@ -39,7 +42,7 @@ const Header = () => {
               onClick={handleClick}
             >
               <p>{menu ? "menu" : "close"}</p>
-              <div>{menu ? <GiHamburgerMenu style={{ fontSize: "2.5rem" }} /> : <MdClose style={{ fontSize: "2.5rem" }} />}</div>
+              <div>{menu ? <CgMenuRight style={{ fontSize: "2.3rem" }} /> : <MdClose style={{ fontSize: "2.3rem" }} />}</div>
             </div>
           </div>
         </div>

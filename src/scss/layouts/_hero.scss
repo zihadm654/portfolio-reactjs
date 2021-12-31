@@ -33,13 +33,13 @@
       grid-column: 2/12;
     }
     grid-column: 2/13;
-    margin-top: 10rem;
+    margin-top: 8.5rem;
     padding: 2.5rem 0;
     color: c.$dominant;
     .circle__text {
       position: absolute;
-      top: -6%;
-      right: 0%;
+      top: -4%;
+      right: 2%;
       @include m.media(sm) {
         display: none;
       }
@@ -59,7 +59,7 @@
       @include m.flex(space-around);
     }
     .primary__btn {
-      margin-top: 5rem;
+      margin-top: 4rem;
     }
   }
 }

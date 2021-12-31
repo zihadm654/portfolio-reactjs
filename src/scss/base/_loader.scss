@@ -1,7 +1,6 @@
 @use '../helpers/variables' as v;
 @use '../helpers/mixins' as m;
 .loader {
-  display: none;
   .overlay {
     z-index: 10000;
     background: #000;
@@ -19,6 +18,14 @@
       font-family: v.$title-font;
       color: #fff;
       margin-right: 5rem;
+    }
+    .wordmill {
+      div {
+        opacity: 0;
+        color: #fff;
+        font-weight: 700;
+        font-size: v.$p;
+      }
     }
   }
 }

@@ -1,24 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from "react-router-dom"
 import Button from '../helpers/Button'
-import { up } from '../helpers/Animation'
 import Footer from '../components/Footer'
-import { BsArrowUp } from 'react-icons/bs'
+import { VerticalScroll } from '../helpers/Animation'
 const Contact = () => {
-  const [info, setInfo] = useState(false)
-  let icon = useRef(null)
+
+  let line1 = useRef(null)
+  let line2 = useRef(null)
   useEffect(() => {
-    up(icon)
+    VerticalScroll([line1, line2])
   }, [])
-  const elevator = () => {
-    window.scroll(0, 0)
-  }
+  const [info, setInfo] = useState(false)
   return (
     <>
       <section className="contact">
         <div className="contact__title">
-          <h4>Got a project?</h4>
-          <h3>Let's work together</h3>
+          <h4 ref={el => line1 = el}>Got a project?</h4>
+          <h3 ref={el => line2 = el}>Let's work together</h3>
         </div>
         <div className="callaction">
           <Button site={'/contact'}
@@ -67,12 +65,6 @@ const Contact = () => {
               {info ? 'Reactjs Scss React-Icons Gsap Vscode' : ''}
             </p>
           </div>
-        </div>
-        <div
-          onClick={elevator}
-          ref={(el) => (icon = el)}
-          className="up">
-          <BsArrowUp />
         </div>
       </section>
       <Footer />

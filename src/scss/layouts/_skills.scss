@@ -58,7 +58,6 @@
     }
   }
   .skills__cards {
-    overflow: hidden;
     grid-column: 7/13;
     @include m.grid;
     @include m.media(sm) {

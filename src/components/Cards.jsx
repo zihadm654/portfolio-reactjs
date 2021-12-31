@@ -1,23 +1,28 @@
 import React, { useRef, useEffect } from 'react'
-import { describe } from "../helpers/Animation"
+import { fadeIn } from "../helpers/Animation"
 import { Link } from 'react-router-dom'
 import { HiOutlineArrowRight } from 'react-icons/hi'
 import { projectsData } from "../data/projectData.js"
 
 const Cards = () => {
-  let wrapper = useRef(null)
+  const revealRefs = useRef([])
+  revealRefs.current = [];
   useEffect(() => {
-    describe(wrapper)
-    window.scroll(0, 0)
+    fadeIn(revealRefs.current)
   }, [])
+  const addRefs = (el) => {
+    if (el && !revealRefs.current.includes(el)) {
+      revealRefs.current.push(el)
+    }
+  }
   return (
     <div className="project__container">
       <div className="cards">
-        {projectsData.map((project, index) => {
+        {projectsData.map((project) => {
           return (
             <main
-              key={index}
-              ref={(el) => (wrapper = el)}
+              key={project.id}
+              ref={addRefs}
               className="card__wrapper">
               <Link to={"/projects/" + project.slug} className="link">
                 <div className="image__container">

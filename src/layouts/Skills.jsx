@@ -1,12 +1,12 @@
 import React, { useRef, useEffect } from 'react'
 import Icon from '../helpers/Icon'
-import { describe, cardAni } from "../helpers/Animation.js"
+import { fadeIn } from "../helpers/Animation.js"
 
 const Skills = () => {
   let desc = useRef(null)
   let card = useRef(null)
   useEffect(() => {
-    describe([desc, card])
+    fadeIn([desc, card])
   }, [])
   return (
     <div className="skills__container">
@@ -14,7 +14,7 @@ const Skills = () => {
         className="skills__description">
         <img
           src="https://uploads-ssl.webflow.com/5efbc66bfe713c08511b3024/5f71257fe6472905bfa023e0_Celebration.svg"
-          alt=""
+          alt="celebration"
         />
         <h3>3 years of Experience</h3>
         <p>
@@ -69,12 +69,9 @@ const Skills = () => {
   )
 }
 const Skill = ({ img, title, description }) => {
-  let item = useRef(null)
-  useEffect(() => {
-    cardAni(item)
-  }, [])
   return (
-    <div ref={(el => (item = el))} className="skill">
+    <div
+      className="skill">
       <img src={img} alt="" />
       <h5>{title}</h5>
       <p>{description}</p>
