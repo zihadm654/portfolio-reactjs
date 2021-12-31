@@ -5,7 +5,6 @@ import { collection, getDocs } from "firebase/firestore";
 
 const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       const res = await getDocs(collection(db, "blogs"))
@@ -16,34 +15,30 @@ const BlogPage = () => {
           id: doc.id
         }
       })
+      setBlogs(data)
     }
-    return {
-
-    }
+    fetchData()
   }, []);
-  if (loading) return <p>fetching data from firebase....</p>
-  // let box = useRef(null)
   return (
     <div className="blog__page">
       <h4>Welcome to my personal blog</h4>
       <div
         className="container">
-        {!blogs ? loading : blogs.map((blog) => (
+        {blogs && blogs.map((blog) => (
           <article
-            // ref={(el) => (box = el)}
             key={blog.id}
             className="content">
-            <Link to={`/blogs/${blog.title}`}>
+            <Link to={`/blogs/${blog.id}`}>
               <div className="blog__img">
-                {/* <img src={blog.img} alt={blog.img} /> */}
+                <img src={blog.img} alt={blog.img} />
               </div>
               <div className="description">
-                <p>{blog.title}</p>
-                {/* <p>{blog.breif}</p> */}
+                <h5>{blog.title}</h5>
+                <p>{blog.sub}</p>
                 <div className="time">
-                  {/* <span>May 12th, 2020</span> */}
-                  {/* <span>{blog.place}</span> */}
+                  <span>{new Date(blog.createdAt).toDateString()}</span>
                 </div>
+                <p>{blog.author}</p>
               </div>
             </Link>
           </article>

@@ -3,13 +3,14 @@
 @use '../helpers/colors' as c;
 .blog__page {
   margin-top: 5rem;
-  padding: 4rem 16rem;
+  padding: 4rem 8rem;
   @include m.media(sm) {
     padding: 2.5rem;
   }
   h4 {
     color: c.$fontColor;
     padding: 2rem 0;
+    text-align: center;
   }
   .container {
     border-radius: 2rem;

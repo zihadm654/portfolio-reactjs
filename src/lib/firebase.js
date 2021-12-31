@@ -1,5 +1,4 @@
 import { initializeApp } from 'firebase/app';
-// TODO: Add SDKs for Firebase products that you want to use
 import { getFirestore } from 'firebase/firestore';
 // Your web app's Firebase configuration
 const firebaseConfig = {
