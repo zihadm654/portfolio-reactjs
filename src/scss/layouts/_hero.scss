@@ -2,6 +2,7 @@
 @use '../helpers/mixins' as m;
 @use '../helpers/colors' as c;
 .hero__wrapper {
+  position: relative;
   padding: 3rem 8rem;
   @include m.grid;
   @include m.media(sm) {
@@ -33,7 +34,7 @@
       grid-column: 2/12;
     }
     grid-column: 2/13;
-    margin-top: 8.5rem;
+    margin-top: 6.5rem;
     padding: 2.5rem 0;
     color: c.$dominant;
     .circle__text {
@@ -57,6 +58,9 @@
     }
     h5 {
       @include m.flex(space-around);
+    }
+    p {
+      width: 70%;
     }
     .primary__btn {
       margin-top: 4rem;

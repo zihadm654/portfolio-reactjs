@@ -39,9 +39,14 @@
       }
       .description {
         padding: 1.5rem;
-        p {
-          padding: 0.5rem 0;
-          // color: c.$fontColor;
+        .info {
+          padding-top: 1rem;
+          @include m.flex(space-between);
+          p {
+            font-weight: 600;
+            padding: 0.5rem 0;
+            color: c.$fontColor;
+          }
         }
       }
     }

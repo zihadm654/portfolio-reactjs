@@ -1,29 +1,54 @@
 import React, { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { projectsData } from '../data/projectData.js'
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from "../lib/firebase"
+
 const CaseDetails = () => {
   const [project, setProject] = useState(null);
   const { slug } = useParams()
+  const id = slug
+
   useEffect(() => {
-    const newArray = projectsData.find(array => array.slug === slug)
-    setProject(newArray)
-  }, [slug])
+    const fetchData = async () => {
+      const projectRef = doc(db, "projects", id)
+      const snapshot = await getDoc(projectRef)
+      const projectSnap = {
+        ...snapshot.data(),
+        id: snapshot.id,
+      }
+      setProject(projectSnap);
+    }
+    fetchData()
+  }, [id])
 
   if (!project) return <div>Loading...</div>
   return (
     <section className="case__details">
-      <div className="case__study">
-        <h2>Case Study</h2>
-        <p>Dividing projects into parts</p>
-      </div>
       <div className="container">
-        <div className="img__wrapper">
-          <img src={project.Img} alt={project.Img} />
+        <div className="case__study--left">
+          <div className="context">
+            <p>Case Study</p>
+            <h4>{project.title}</h4>
+          </div>
+          <div className="context">
+            <p>My Role</p>
+            <h5>{project.role}</h5>
+          </div>
+          <div className="context">
+            <p>Client</p>
+            <h5>{project.client}</h5>
+          </div>
+          <div className="context">
+            <p>Year</p>
+            <h5>{project.time}</h5>
+          </div>
         </div>
-        <div className="content">
-          <h4>{project.name}</h4>
-          <p>{project.description}</p>
+        <div className="case__study--right">
+          <h5>{project.description}</h5>
         </div>
+      </div>
+      <div className="img__wrapper">
+        <img src={project.img} alt={project.img} />
       </div>
     </section>
   )

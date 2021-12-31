@@ -20,17 +20,22 @@ const BlogDetails = () => {
     }
     fetchData()
   }, [id])
-  console.log(blog);
   return (
     <div className="blog__details">
       <article>
+        <h3>{blog.title}</h3>
+        <div className="context">
+
+          <div className="info">
+            <p>{blog.author}</p>
+            <p>/{new Date(blog.createdAt).toDateString()}</p>
+          </div>
+          <div className="time">
+            <p>*12 min read</p>
+          </div>
+        </div>
         <div className="img__container">
           <img src={blog.img} alt={blog.img} />
-        </div>
-        <h4>{blog.title}</h4>
-        <div className="time">
-          <p>{blog.author}</p>
-          <span>{new Date(blog.createdAt).toDateString()}</span>
         </div>
         <div className="description">
           <h5>{blog.sub}</h5>
@@ -44,10 +49,10 @@ const BlogDetails = () => {
       </article>
       <div className="conclution">
         <h4>Conclusion:-</h4>
-        <p>Learn by breaking things into parts and enjoying that you are doing that is the effective way to get going with programming. Because without understanding it you can't go long way. So, have fun</p>
+        <p>Learn by breaking things into parts and enjoying that you are doing that is the effective way to get going with programming. Because without understanding it you can't go long way. So, have fun.</p>
+        <p>I am there to make developer life easier.</p>
         <h5>I am Abdul malik.</h5>
         <span> Front-end-developer & UI/UX designer</span>
-        <p>I am there to make developer life easier.</p>
       </div>
     </div>
   )

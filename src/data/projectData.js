@@ -9,7 +9,7 @@ export const projectsData = [
     name: 'A breif about my Portfolio',
     slug: 'first-case',
     description:
-      'A quick glimpse at a few of a portfolio site which is packed with UI/UX Design',
+      'A quick glimpse towards a mordern site which is packed with UI/UX Design',
     Img: Img1,
   },
   {

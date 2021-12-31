@@ -35,10 +35,10 @@ const BlogPage = () => {
               <div className="description">
                 <h5>{blog.title}</h5>
                 <p>{blog.sub}</p>
-                <div className="time">
-                  <span>{new Date(blog.createdAt).toDateString()}</span>
+                <div className="info">
+                  <p>{blog.author}</p>
+                  <p>{new Date(blog.createdAt).toDateString()}</p>
                 </div>
-                <p>{blog.author}</p>
               </div>
             </Link>
           </article>

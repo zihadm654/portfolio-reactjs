@@ -1,13 +1,28 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import Button from '../helpers/Button'
-import Cards from '../components/Cards'
+import LayoutCards from '../components/Cards'
 import { fadeIn } from "../helpers/Animation"
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../lib/firebase'
 
 const Projects = () => {
   let title = useRef(null)
   let subTitle = useRef(null)
+  const [cards, setCards] = useState([])
+
   useEffect(() => {
     fadeIn([title, subTitle])
+    const fetchData = async () => {
+      const res = await getDocs(collection(db, "projects"))
+      const data = res.docs.map(doc => {
+        return {
+          ...doc.data(),
+          id: doc.id
+        }
+      })
+      setCards(data)
+    }
+    fetchData()
   }, [])
   return (
     <section
@@ -21,7 +36,18 @@ const Projects = () => {
           inspiring animations.
         </p>
       </div>
-      <Cards />
+      <div className="project__container">
+        <div className="cards">
+          {cards?.map(({ id, title, img, description }) => (
+            <LayoutCards
+              key={id}
+              title={title}
+              img={img}
+              description={description}
+            />
+          ))}
+        </div>
+      </div>
       <Button
         site={"/projects"}
         className='secondary__btn' text='see more work' />

@@ -1,38 +1,66 @@
-@use '../helpers/variables' as v;
-@use '../helpers/mixins' as m;
 @use '../helpers/colors' as c;
-
+@use '../helpers/mixins' as m;
+@use '../helpers/variables' as v;
 .case__details {
-  margin-top: 4rem;
-  padding: 4rem 7rem;
+  margin-top: 6rem;
+  padding: 4rem 8rem;
   @include m.media(sm) {
-    padding: 2.5rem;
-  }
-  .case__study {
-    text-align: center;
-    h2 {
-      padding: 0.5rem 0;
-    }
-    p {
-      color: c.$fontColor;
-    }
+    padding: 4rem 3rem;
   }
   .container {
-    padding: 5rem 0;
-    .img__wrapper {
-      height: 40em;
-      width: 100%;
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+    @include m.grid;
+    .case__study--left {
+      grid-column: 1/6;
+      @include m.media(sm) {
+        grid-column: 1/13;
+      }
+      .context {
+        margin: 2rem 0;
+        h4 {
+          font-size: v.$xlr;
+          font-weight: 700;
+          padding: 0.8rem 0;
+          line-height: 1;
+        }
+        p {
+          margin-bottom: 0.6rem;
+          letter-spacing: 0.4rem;
+          text-transform: uppercase;
+          color: gray;
+        }
       }
     }
+    .case__study--right {
+      grid-column: 6/13;
+      @include m.media(sm) {
+        grid-column: 1/13;
+      }
+      @include m.media(xlg) {
+        margin-left: 16%;
+        margin-top: 5.5rem;
+      }
+      h5 {
+        font-weight: 500;
+        color: gray;
+      }
+    }
+    padding: 5rem 0;
     .content {
       padding: 3rem 0;
       h4 {
         font-weight: 500;
+        padding: 1rem 0;
       }
+    }
+  }
+  .img__wrapper {
+    position: relative;
+    height: 60rem;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
   }
 }
