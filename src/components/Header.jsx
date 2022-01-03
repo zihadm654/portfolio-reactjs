@@ -1,28 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { CgMenuRight } from 'react-icons/cg'
 import { MdClose } from "react-icons/md"
 import Logo from '../assets/logo.png'
 import Hamburger from './Hamburger'
+import { stateContext } from "../lib/stateContext"
 
 const Header = () => {
+
+  const { menu, setMenu } = useContext(stateContext)
+
   const close = () => {
     setMenu(!menu)
   }
-  const [menu, setMenu] = useState(true)
+
   const handleClick = () => {
     menu ? setMenu(prev => !prev) : setMenu(prev => !prev)
-    if (menu) {
-
-    }
   }
+  !menu ? document.body.style.overflow = "hidden" : document.body.style.overflow = "scroll"
+
   const [sticky, setSticky] = useState(false)
   const stickyNav = () => {
-    if (window.scrollY >= 70) {
-      setSticky(true)
-    } else {
-      setSticky(false)
-    }
+    window.scrollY >= 70 ? setSticky(true) : setSticky(false)
   }
   window.addEventListener('scroll', stickyNav)
 

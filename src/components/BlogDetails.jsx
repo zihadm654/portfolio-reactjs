@@ -20,6 +20,7 @@ const BlogDetails = () => {
     }
     fetchData()
   }, [id])
+  if (!blog) return <h5>Loading...</h5>
   return (
     <div className="blog__details">
       <article>
