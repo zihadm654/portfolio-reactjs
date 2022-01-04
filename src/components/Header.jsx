@@ -17,14 +17,13 @@ const Header = () => {
   const handleClick = () => {
     menu ? setMenu(prev => !prev) : setMenu(prev => !prev)
   }
-  !menu ? document.body.style.overflow = "hidden" : document.body.style.overflow = "scroll"
+  !menu ? document.body.style.overflow = "hidden" : document.body.style.overflow = ""
 
   const [sticky, setSticky] = useState(false)
   const stickyNav = () => {
     window.scrollY >= 70 ? setSticky(true) : setSticky(false)
   }
   window.addEventListener('scroll', stickyNav)
-
   return (
     <header>
       <div className="container">

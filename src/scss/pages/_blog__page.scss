@@ -7,6 +7,9 @@
   @include m.media(sm) {
     padding: 2.5rem;
   }
+  @include m.media(md) {
+    padding: 3.5rem;
+  }
   h4 {
     color: c.$fontColor;
     padding: 2rem 0;

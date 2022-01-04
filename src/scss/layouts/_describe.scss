@@ -6,6 +6,9 @@
   @include m.media(sm) {
     padding: 2.5rem;
   }
+  @include m.media(md) {
+    padding: 3.5rem;
+  }
   &__left {
     @include m.media(sm) {
       grid-column: 1/13;

@@ -8,6 +8,9 @@
   @include m.media(sm) {
     padding: 2.5rem;
   }
+  @include m.media(md) {
+    padding: 3.5rem;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -28,7 +31,7 @@
       grid-column: 1/13;
     }
     @include m.media(md) {
-      grid-column: 2/11;
+      grid-column: 2/12;
     }
     @include m.media(xlg) {
       grid-column: 2/12;

@@ -50,8 +50,8 @@ export const HorizontalScroll = (el) => {
 export const textIntro = (el) => {
   gsap.from(el, 0.8, {
     opacity: 0,
-    y: 64,
-    delay: 0.4,
+    y: 45,
+    delay: 0.3,
     ease: Power3.easeOut,
     stagger: {
       amount: 0.6,

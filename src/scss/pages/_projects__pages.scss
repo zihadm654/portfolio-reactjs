@@ -3,8 +3,10 @@
   margin-top: 5rem;
   padding: 5rem 8rem;
   @include media(sm) {
-    // margin-;
     padding: 5rem 2.5rem;
+  }
+  @include media(md) {
+    padding: 5rem 3.5rem;
   }
   .projects__title {
     width: 65%;

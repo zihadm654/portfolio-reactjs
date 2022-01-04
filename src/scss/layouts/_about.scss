@@ -6,7 +6,7 @@
   color: #ffffff;
   padding: 4rem 0;
   .about__wrapper {
-    padding: 4rem 8rem;
+    padding: 0rem 8rem;
     @include m.grid;
     @include m.media(sm) {
       padding: 2rem;
@@ -15,16 +15,23 @@
       padding: 4rem;
     }
     .img__wrapper {
+      background-image: url('../../assets/IMG_20220101_115612.jpg');
+      background-position: 100% 100%, 100% 100%;
+      background-repeat: no-repeat;
+      background-size: 95% 125%, 100% 100%;
+      height: 45rem;
       width: 100%;
-      height: 35rem;
       grid-column: span 6;
-      background: red;
       @include m.media(sm) {
+        order: 1;
         grid-column: 1/13;
+        background-size: 100% 132%, 100% 100%;
       }
       @include m.media(md) {
-        height: 38rem;
         grid-column: 1/13;
+        order: 1;
+        background-size: 100% 132%, 100% 100%;
+        height: 55rem;
       }
       @include m.media(lg) {
         height: 42rem;
@@ -35,9 +42,11 @@
       grid-column: span 6;
       @include m.media(sm) {
         grid-column: 1/13;
+        order: 2;
       }
       @include m.media(md) {
         grid-column: 1/13;
+        order: 2;
       }
       h3 {
         line-height: 1.1;
@@ -45,6 +54,12 @@
       }
       .link {
         padding: 1rem 0;
+      }
+      .cta {
+        @include m.flex(flex-start);
+      }
+      .cv {
+        margin-left: 2rem;
       }
     }
   }

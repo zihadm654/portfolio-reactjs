@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Cards from '../components/Cards'
 import { db } from "../lib/firebase"
 import { collection, getDocs } from 'firebase/firestore'
-
+import { textIntro } from '../helpers/Animation'
 const ProjectPage = () => {
   const [projects, setProjects] = useState([])
-
+  let head = useRef(null)
+  let para = useRef(null)
   useEffect(() => {
+    textIntro([head, para])
     const fetchData = async () => {
       const res = await getDocs(collection(db, "projects"))
       const data = res.docs.map(doc => {
@@ -22,10 +24,10 @@ const ProjectPage = () => {
   return (
     <section className="projects">
       <div className="projects__title">
-        <h3>
+        <h3 ref={el => head = el}>
           Shaping world class websites in a practical manner.
         </h3>
-        <p>
+        <p ref={el => para = el}>
           I can help you successfully take your business online while
           assisting you throughout the building process.
         </p>
@@ -33,7 +35,7 @@ const ProjectPage = () => {
       <h3>Featured projects</h3>
       <div className="project__container">
         <div className="cards">
-          {projects?.map(({ title, img, description, id }) => (
+          {projects?.map(({ title, img, description, id, site }) => (
             <Cards
               key={id}
               img={img}

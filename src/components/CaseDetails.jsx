@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from "../lib/firebase"
+import { HiOutlineArrowRight } from 'react-icons/hi'
 
 const CaseDetails = () => {
   const [project, setProject] = useState(null);
@@ -32,7 +33,9 @@ const CaseDetails = () => {
           </div>
           <div className="context">
             <p>My Role</p>
-            <h5>{project.role}</h5>
+            {project.role.map((item, i) => (
+              <h5 key={i}>{item}</h5>
+            ))}
           </div>
           <div className="context">
             <p>Client</p>
@@ -45,6 +48,13 @@ const CaseDetails = () => {
         </div>
         <div className="case__study--right">
           <h5>{project.description}</h5>
+          <div className="link">
+            <a href={project.site} target="_blank"
+              rel="noreferrer">
+              Live site
+              <HiOutlineArrowRight className="icon" />
+            </a>
+          </div>
         </div>
       </div>
       <div className="img__wrapper">

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import {
   SiHtml5,
   SiCss3,
@@ -13,19 +13,32 @@ import {
 } from 'react-icons/si'
 import CheckOut from '../components/CheckOut'
 import Testimonial from "../components/Testimonial"
+import { textIntro, fadeIn } from "../helpers/Animation"
 const AboutPage = () => {
+  let heading1 = useRef(null)
+  let heading2 = useRef(null)
+  let para = useRef(null)
+  let heading3 = useRef(null)
+  let icons = useRef(null)
+  let list1 = useRef(null)
+  let list2 = useRef(null)
+  let list3 = useRef(null)
+  let experience = useRef(null)
   useEffect(() => {
+    textIntro([heading1, heading2, para, heading3, icons])
+    fadeIn([list1, list2, list3])
+    fadeIn(experience)
     window.scroll(0, 0)
   }, [])
   return (
     <section className="about__page">
       <div className="about__description">
-        <h5>A FEW WORDS ABOUT ME</h5>
-        <h3>
+        <h5 ref={el => heading1 = el}>A FEW WORDS ABOUT ME</h5>
+        <h3 ref={el => heading2 = el}>
           I’m Abdul Malik, a <span>Frontend-developer & UI/UX designer </span> who focuses on
           telling stories visually, through <span>minimalistic </span> and clear way. I design and develop <span>responsive websites </span>and functional user friendly interfaces.
         </h3>
-        <p>
+        <p ref={el => para = el}>
           Over the past 3 years I have been working and as a rising startups
           around the world as a developer and designer, working solo. In my
           spare time I enjoy to see sunset and adventures.
@@ -37,9 +50,9 @@ const AboutPage = () => {
 
       <div className="language__container">
         <div className="language__title">
-          <h3>LANGUAGES & TOOLS I DO USE</h3>
+          <h3 ref={el => heading3 = el}>LANGUAGES & TOOLS I DO USE</h3>
         </div>
-        <div className="languages">
+        <div className="languages" ref={el => icons = el}>
           <SiReact className="language react" />
           <SiJavascript className="language javascript" />
           <SiSass className="language scss" />
@@ -55,23 +68,24 @@ const AboutPage = () => {
       <div className="tools">
         <div className="tools__left">
           <h5>DEVELOPMENT SERVICES</h5>
-          <h4>
+          <h4 ref={el => list1 = el}>
             Responsive Website / Minimalistic Website / Agency Website / Animation
           </h4>
         </div>
         <div className="tools__middle">
           <h5>DESIGN SERVICES</h5>
-          <h4>
+          <h4 ref={el => list2 = el}>
             Art direction / Web & Mobile / UX & UI / Typography / Interface / Iconography
           </h4>
         </div>
         <div className="tools__right">
           <h5>TOOLS I USE</h5>
-          <h4>VS code / Firebase / Figma / Pen & paper / Type Scaler / Google fonts</h4>
+          <h4 ref={el => list3 = el}>VS code / Firebase / Figma / Pen & paper / Type Scaler / Google fonts</h4>
         </div>
       </div>
       <Testimonial />
-      <div className="experience">
+      <div className="experience"
+        ref={el => experience = el}>
         <h5>EXPERIENCE</h5>
         <h3>Over 3 years of experience</h3>
         <p>

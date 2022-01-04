@@ -40,12 +40,12 @@ const BlogDetails = () => {
         </div>
         <div className="description">
           <h5>{blog.sub}</h5>
-          {/* {blog.desc.map(article => (
-              <article key={article.title}>
-                <h5>{article.title}</h5>
-                <p>{article.body}</p>
-              </article>
-            ))} */}
+          {/* {blog.articles.map((article, i) => (
+            <article key={i}>
+              <h5>{article.title}</h5>
+              <p>{article.desc}</p>
+            </article>
+          ))} */}
         </div>
       </article>
       <div className="conclution">

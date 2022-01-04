@@ -7,6 +7,9 @@
   @include m.media(sm) {
     padding: 3rem;
   }
+  @include m.media(md) {
+    padding: 3.5rem;
+  }
   .content {
     padding: 10rem 0;
     h2 {

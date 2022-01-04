@@ -55,6 +55,9 @@
       .link {
         @include m.flex(left);
         color: c.$secondaryColor;
+        &:hover {
+          color: c.$primaryColor;
+        }
       }
     }
   }

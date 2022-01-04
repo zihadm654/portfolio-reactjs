@@ -18,7 +18,7 @@ export const Blogs = [
       },
       {
         id: 'topic2',
-        title: 'command Pallete',
+        title: 'Command Pallete',
         description:
           'You can litterliy do anything or go any where or open any of the function in vscode. To open command pallete with shortcut press (ctrl + shift + p) Now you can type any function and go there. For example type settings It will take you to settings pane',
       },
