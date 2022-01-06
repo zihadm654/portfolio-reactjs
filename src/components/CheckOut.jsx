@@ -6,14 +6,14 @@ const CheckOut = () => {
   return (
     <>
       <div className="checkout">
-        <div className="checkout__left">
+        <div className="checkout__left item">
           <div className="content">
             <h4>Work</h4>
             <p>Take a look at I've <br /> created and get inspired</p>
             <Icon linkName={'/projects'} text={'checkout'} />
           </div>
         </div>
-        <div className="checkout__right">
+        <div className="checkout__right item">
           <div className="content">
             <h4>Blogs</h4>
             <p>Take a look at I've <br /> created and get inspired</p>

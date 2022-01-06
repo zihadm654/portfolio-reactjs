@@ -38,13 +38,14 @@ const Hero = () => {
             heading3 = el
           }}
         >
-          I am a self-taught Front-end-developer and UI/UX designer. Crafting
+          Crafting
           Website Based on Simplicity and Performance that are
           <span>
             {' '}
             conversions-focused, brand-accurate, user-friendly, performance and
             minimalistic based.
           </span>
+          {" "}Helping your buisness stand out.
         </p>
         <Button
           site={"/contact"}

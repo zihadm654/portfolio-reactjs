@@ -128,4 +128,31 @@
       }
     }
   }
+  .principles {
+    padding: 2rem 0 4rem 0;
+    h4 {
+      color: gray;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .principle {
+      padding: 2rem 0;
+      &__title {
+        padding: 2rem 0;
+        h5 {
+          font-size: v.$md;
+          font-weight: 700;
+        }
+      }
+      article {
+        padding: 0.5rem 2rem;
+        h5 {
+          padding: 1rem;
+        }
+        p {
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
 }

@@ -10,7 +10,8 @@
   box-sizing: border-box;
 }
 ::-webkit-scrollbar {
-  width: 0.9rem !important;
+  width: 0.6rem !important;
+  height: 15vh !important;
 }
 ::-webkit-scrollbar-thumb {
   background: rgb(160, 160, 160);

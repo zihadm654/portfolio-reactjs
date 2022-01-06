@@ -46,6 +46,12 @@
         font-weight: 500;
         color: gray;
       }
+      .links {
+        @include m.flex(flex-start);
+        .repo {
+          margin-left: 2rem;
+        }
+      }
     }
     padding: 5rem 0;
     .content {

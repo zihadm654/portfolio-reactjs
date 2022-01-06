@@ -21,6 +21,9 @@ const ProjectPage = () => {
     }
     fetchData()
   }, []);
+  if (!projects) {
+    return <h5>Fetching data from firebase</h5>
+  }
   return (
     <section className="projects">
       <div className="projects__title">
@@ -35,7 +38,7 @@ const ProjectPage = () => {
       <h3>Featured projects</h3>
       <div className="project__container">
         <div className="cards">
-          {projects?.map(({ title, img, description, id, site }) => (
+          {projects?.map(({ title, img, description, id }) => (
             <Cards
               key={id}
               img={img}

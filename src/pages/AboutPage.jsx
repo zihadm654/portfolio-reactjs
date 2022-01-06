@@ -95,6 +95,36 @@ const AboutPage = () => {
           head over to my <a href="https://www.linkedin.com/in/zihadm654">Linkedin profile</a>
         </p>
       </div>
+      <div className="principles">
+        <h4>Principles I do use?</h4>
+        <div className="principle">
+          <div className="principle__title">
+            <h5>For design purposes</h5>
+          </div>
+          <article>
+            <h5>Grid System</h5>
+            <p>I use mostly grid system. <span> Grid system</span> is a way which can make your design so much clean and align can be so much perfect. I use the <span>
+              12 grid.</span> So, it helps me to divide the design into <span> 3 parts.</span></p>
+          </article>
+          <article>
+            <h5>Component Style</h5>
+            <p>I like to use small components and resuse most of the time. That way i can be consistent with design and make work easier. And most importantly this approach can save time <span> small components</span> And component is like varible if i change one it will be changed all at one.</p>
+          </article>
+        </div>
+        <div className="principle development">
+          <div className="principle__title">
+            <h5>For Development purposes</h5>
+          </div>
+          <article>
+            <h5>Bem naming convention</h5>
+            <p>In development part. When i write Html i probably use <span> BEM </span>naming convention to call the classes of html elements. It helps me when i style website with SCSS. I can use nested style and <span> & percentage.</span></p>
+          </article>
+          <article>
+            <h5>Small components</h5>
+            <p>By Small components i ment simply dividing my big problems into small parts.<span> Simpilicity</span> is the king in every aspect of our life. <span> small components</span> saves a lot of time and make work more productive.</p>
+          </article>
+        </div>
+      </div>
       <CheckOut />
     </section >
   )

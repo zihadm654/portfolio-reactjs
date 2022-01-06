@@ -48,12 +48,21 @@ const CaseDetails = () => {
         </div>
         <div className="case__study--right">
           <h5>{project.description}</h5>
-          <div className="link">
-            <a href={project.site} target="_blank"
-              rel="noreferrer">
-              Live site
-              <HiOutlineArrowRight className="icon" />
-            </a>
+          <div className="links">
+            <div className="link">
+              <a href={project.site} target="_blank"
+                rel="noreferrer">
+                Live site
+                <HiOutlineArrowRight className="icon" />
+              </a>
+            </div>
+            <div className="link repo">
+              <a href={project.repo} target="_blank"
+                rel="noreferrer">
+                Code preview
+                <HiOutlineArrowRight className="icon" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -21,7 +21,8 @@ const BlogPage = () => {
   }, []);
   return (
     <div className="blog__page">
-      <h4>Welcome to my personal blog</h4>
+      <h3>Blog</h3>
+      <p>I've been writing online since 2021, mostly about web development and tech careers. In total, I've written 68 articles on this site. Use the search below to filter by title.</p>
       <div
         className="container">
         {blogs && blogs.map((blog) => (
@@ -29,9 +30,6 @@ const BlogPage = () => {
             key={blog.id}
             className="content">
             <Link to={`/blogs/${blog.id}`}>
-              <div className="blog__img">
-                <img src={blog.img} alt={blog.img} />
-              </div>
               <div className="description">
                 <h5>{blog.title}</h5>
                 <p>{blog.sub}</p>

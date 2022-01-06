@@ -13,10 +13,11 @@ const Projects = () => {
   useEffect(() => {
     fadeIn([title, subTitle])
     const fetchData = async () => {
-      const res = await getDocs(collection(db, "projects"))
+      const res = await (await getDocs(collection(db, "projects")))
       const data = res.docs.map(doc => {
         return {
           ...doc.data(),
+          createdAt: doc.data().createdAt.toMillis(),
           id: doc.id
         }
       })
