@@ -1,31 +1,20 @@
 import React, { useRef, useEffect } from 'react'
-import { screenAnimation, loaderAni, blink } from "../helpers/Animation"
+import { screenAnimation, staggerText } from "../helpers/Animation"
 export default function Loader() {
   let loader = useRef(null)
-  let first = useRef(null)
-  let second = useRef(null)
-  let third = useRef(null)
+  let line1 = useRef(null)
+  let title = useRef(null)
   useEffect(() => {
     screenAnimation(loader)
-    loaderAni([first, second, third])
-    blink([first, second, third])
-
+    staggerText([title, line1])
   }, [])
   return (
     <section className="loader"
       ref={(el) => (loader = el)}>
-      <div className="overlay">
-        <h1 className="title">Abdul Malik</h1>
-        <div className="wordmill">
-          <div
-            ref={(el) => (first = el)}>Frontend-Developer</div>
-          <div
-            ref={(el) => (second = el)}>
-            UI/UX Designer</div>
-          <div
-            ref={(el) => (third = el)}>
-            React Developer</div>
-        </div>
+      <h1 className="title"
+        ref={el => title = el}>Abdul Malik</h1>
+      <div className="windmill">
+        <h5 ref={el => line1 = el}>Frontend-Developer & UI/UX Designer</h5>
       </div>
     </section>
   )

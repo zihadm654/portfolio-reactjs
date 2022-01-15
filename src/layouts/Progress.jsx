@@ -4,22 +4,18 @@ import { fadeIn } from "../helpers/Animation"
 
 const Progress = () => {
   useEffect(() => {
-    fadeIn([Title, subtitle, content, content1])
+    fadeIn([container])
   }, [])
-  let Title = useRef(null)
-  let subtitle = useRef(null)
-  let content = useRef(null)
-  let content1 = useRef(null)
-
+  let container = useRef(null)
   return (
     <section className="progress">
-      <div className="progress__description">
-        <h5 ref={(el) => (Title = el)}
+      <div
+        ref={(el) => (container = el)}
+        className="progress__description">
+        <h5
         >How i go with projects?</h5>
-        <h3 ref={(el) => (subtitle = el)}
-        >Going beyond what’s possible</h3>
-        <div ref={(el) => (content = el)}
-          className="list">
+        <h3>Going beyond what’s possible</h3>
+        <div className="list">
           <h4>
             Concept
           </h4>
@@ -47,7 +43,7 @@ const Progress = () => {
           <h4>Develpement
           </h4>
         </div>
-        <p ref={(el) => (content1 = el)}>Whatever the challenge, we'll deliver solution you will love it.</p>
+        <p>Whatever the challenge, we'll deliver solution you will love it.</p>
       </div>
       <Icon linkName={"/story"} text={'read more'} />
     </section>

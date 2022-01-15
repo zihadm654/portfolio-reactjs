@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import Loader from "../components/Loader"
 // import { db } from '../lib/connection'
 
 const StoryPage = () => {
@@ -6,9 +7,12 @@ const StoryPage = () => {
     window.scroll(0, 0)
   }, [])
   return (
-    <div className="storyPage">
-      <h4>Story page will be up to date soon Thanks for the patients</h4>
-    </div>
+    <>
+      <Loader />
+      <div className="storyPage">
+        <h4>Story page will be up to date soon Thanks for the patients</h4>
+      </div>
+    </>
   )
 }
 

@@ -3,6 +3,7 @@ import Cards from '../components/Cards'
 import { db } from "../lib/firebase"
 import { collection, getDocs } from 'firebase/firestore'
 import { textIntro } from '../helpers/Animation'
+import Loader from "../components/Loader"
 const ProjectPage = () => {
   const [projects, setProjects] = useState([])
   let head = useRef(null)
@@ -25,31 +26,34 @@ const ProjectPage = () => {
     return <h5>Fetching data from firebase</h5>
   }
   return (
-    <section className="projects">
-      <div className="projects__title">
-        <h3 ref={el => head = el}>
-          Shaping world class websites in a practical manner.
-        </h3>
-        <p ref={el => para = el}>
-          I can help you successfully take your business online while
-          assisting you throughout the building process.
-        </p>
-      </div>
-      <h3>Featured projects</h3>
-      <div className="project__container">
-        <div className="cards">
-          {projects?.map(({ title, img, description, id }) => (
-            <Cards
-              key={id}
-              img={img}
-              title={title}
-              id={id}
-              description={description}
-            />
-          ))}
+    <>
+      <Loader />
+      <section className="projects">
+        <div className="projects__title">
+          <h3 ref={el => head = el}>
+            Shaping world class websites in a practical manner.
+          </h3>
+          <p ref={el => para = el}>
+            I can help you successfully take your business online while
+            assisting you throughout the building process.
+          </p>
         </div>
-      </div>
-    </section>
+        <h3>Featured projects</h3>
+        <div className="project__container">
+          <div className="cards">
+            {projects?.map(({ title, img, description, id }) => (
+              <Cards
+                key={id}
+                img={img}
+                title={title}
+                id={id}
+                description={description}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
 

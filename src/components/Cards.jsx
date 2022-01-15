@@ -3,7 +3,6 @@ import { fadeIn } from "../helpers/Animation"
 import { Link } from 'react-router-dom'
 import { HiOutlineArrowRight } from 'react-icons/hi'
 
-
 const Cards = ({ img, id, description, title }) => {
   const revealRefs = useRef([])
   revealRefs.current = [];

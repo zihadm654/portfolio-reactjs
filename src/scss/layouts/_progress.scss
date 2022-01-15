@@ -2,6 +2,7 @@
 @use '../helpers/mixins' as m;
 @use '../helpers/colors' as c;
 .progress {
+  margin: 6rem 0;
   padding: 8rem;
   @include m.media(sm) {
     padding: 3rem 2rem;
@@ -34,6 +35,9 @@
     }
     h4 {
       @include m.media(sm) {
+        font-size: v.$md;
+      }
+      @include m.media(md) {
         font-size: v.$md;
       }
     }

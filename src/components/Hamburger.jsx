@@ -21,11 +21,8 @@ const Hamburger = ({ menu, close }) => {
 
   useEffect(() => {
     if (menu) {
-      gsap.to(burger, {
-        duration: 1,
-        css: { display: 'none' },
-      })
-      staggerRevealClose(revealMenu, revealMenuBackground)
+      staggerRevealClose([revealMenuBackground, revealMenu])
+      gsap.to(burger, { duration: 1, css: { display: "none" } });
     } else if (!menu) {
       gsap.to(burger, {
         duration: 0,
@@ -36,7 +33,7 @@ const Hamburger = ({ menu, close }) => {
         opacity: 1,
         height: '100%',
       })
-      staggerReveal(revealMenu, revealMenuBackground)
+      staggerReveal([revealMenu, revealMenuBackground])
       fadeInUp(info)
       Links([list1, list2, list3, list4, list5])
     }

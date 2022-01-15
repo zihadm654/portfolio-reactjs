@@ -13,7 +13,7 @@ const CaseDetails = lazy(() => import('./components/CaseDetails'));
 const Routes = () => {
   return (
     <section>
-      <Suspense fallback={<p>loading</p>}>
+      <Suspense fallback={<p>loading...</p>}>
         <Switch>
           <Route path="/" exact>
             <Home />
