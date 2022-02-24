@@ -14,7 +14,7 @@ import {
 import CheckOut from '../components/CheckOut'
 import Testimonial from "../components/Testimonial"
 import { textIntro, fadeIn } from "../helpers/Animation"
-import Loader from "../components/Loader"
+// import Loader from "../components/Loader"
 const AboutPage = () => {
   let heading1 = useRef(null)
   let heading2 = useRef(null)
@@ -38,7 +38,7 @@ const AboutPage = () => {
   }, [])
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
       <section className="about__page">
         <div className="about__description">
           <h5 ref={el => heading1 = el}>A FEW WORDS ABOUT ME</h5>

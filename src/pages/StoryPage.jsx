@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import Loader from "../components/Loader"
+// import Loader from "../components/Loader"
 // import { db } from '../lib/connection'
 
 const StoryPage = () => {
@@ -8,7 +8,7 @@ const StoryPage = () => {
   }, [])
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
       <div className="storyPage">
         <h4>Story page will be up to date soon Thanks for the patients</h4>
       </div>

@@ -3,7 +3,7 @@ import Cards from '../components/Cards'
 import { db } from "../lib/firebase"
 import { collection, getDocs } from 'firebase/firestore'
 import { textIntro } from '../helpers/Animation'
-import Loader from "../components/Loader"
+// import Loader from "../components/Loader"
 const ProjectPage = () => {
   const [projects, setProjects] = useState([])
   let head = useRef(null)
@@ -27,7 +27,7 @@ const ProjectPage = () => {
   }
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
       <section className="projects">
         <div className="projects__title">
           <h3 ref={el => head = el}>

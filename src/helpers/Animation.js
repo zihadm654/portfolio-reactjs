@@ -1,18 +1,18 @@
-import { gsap, Power3 } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap, Power3 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export const screenAnimation = (el) => {
   gsap.to(el, 1.3, {
     delay: 1,
-    y: '-100%',
+    y: "-100%",
   });
 };
 export const staggerText = (el) => {
   gsap.from(el, 0.6, {
     delay: 0.1,
     opacity: 0,
-    y: '-100%',
+    y: "-100%",
     stagger: {
       amount: 0.4,
     },
@@ -27,8 +27,8 @@ export const VerticalScroll = (el) => {
     ease: Power3.easeOut,
     scrollTrigger: {
       trigger: el,
-      start: 'top 90%',
-      end: 'bottom center',
+      start: "top 90%",
+      end: "bottom center",
     },
     stagger: {
       amount: 0.4,
@@ -40,17 +40,17 @@ export const HorizontalScroll = (el) => {
     el,
     1,
     {
-      width: '0%',
+      width: "0%",
       delay: 0.1,
       ease: Power3.easeOut,
     },
     {
       ease: Power3.easeOut,
-      width: '100%',
+      width: "100%",
       scrollTrigger: {
         trigger: el,
-        start: 'top 90%',
-        end: 'bottom center',
+        start: "top 90%",
+        end: "bottom center",
       },
     }
   );
@@ -59,7 +59,7 @@ export const textIntro = (el) => {
   gsap.from(el, 0.8, {
     opacity: 0,
     y: 45,
-    delay: 2.2,
+    delay: 0.2,
     ease: Power3.easeOut,
     stagger: {
       amount: 0.6,
@@ -77,8 +77,8 @@ export const fadeIn = (el) => {
     },
     scrollTrigger: {
       trigger: el,
-      start: 'center 85%',
-      end: 'bottom center',
+      start: "center 85%",
+      end: "bottom center",
     },
   });
 };
@@ -98,8 +98,8 @@ export const cardAni = (el) => {
     ease: Power3.easeOut,
     scrollTrigger: {
       trigger: el,
-      start: 'top 90%',
-      end: 'bottom center',
+      start: "top 90%",
+      end: "bottom center",
     },
     stagger: { amount: 0.7 },
   });
@@ -110,8 +110,8 @@ export const staggerReveal = (el) => {
     duration: 0.8,
     height: 0,
     skewY: 2,
-    transformOrigin: 'right top',
-    ease: 'power3.easeOut',
+    transformOrigin: "right top",
+    ease: "power3.easeOut",
     stagger: {
       amount: 0.1,
     },
@@ -123,7 +123,7 @@ export const staggerRevealClose = (el) => {
   gsap.to(el, {
     duration: 0.8,
     height: 0,
-    ease: 'power3.inOut',
+    ease: "power3.inOut",
     stagger: {
       amount: 0.07,
     },
@@ -137,19 +137,19 @@ export const fadeInUp = (node) => {
     duration: 1,
     delay: 0.2,
     opacity: 0,
-    ease: 'power3.inOut',
+    ease: "power3.inOut",
   });
 };
 
 export const up = (el) => {
   gsap.to(el, 1, {
-    ease: 'power3.easeOut',
+    ease: "power3.easeOut",
     opacity: 1,
     scrollTrigger: {
       trigger: el,
-      start: 'top 85%',
-      end: 'bottom center',
-      triggerAction: 'play none none none',
+      start: "top 85%",
+      end: "bottom center",
+      triggerAction: "play none none none",
       scrub: 0.5,
     },
   });

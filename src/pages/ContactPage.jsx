@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Checkout from '../components/CheckOut'
-import Loader from '../components/Loader';
+// import Loader from '../components/Loader';
 const ContactPage = () => {
   function sendEmail(e) {
     e.preventDefault();
@@ -11,7 +11,7 @@ const ContactPage = () => {
   }, [])
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
       <section className="contact__page">
         <div className="content">
           <h5>LET'S TALK</h5>

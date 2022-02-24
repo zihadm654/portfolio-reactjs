@@ -4,13 +4,13 @@ import Projects from '../layouts/Projects'
 import Progress from '../layouts/Progress'
 import Skills from '../layouts/Skills'
 import About from '../layouts/About'
-import Loader from "../components/Loader"
+// import Loader from "../components/Loader"
 
 const HomePage = () => {
 
   return (
     <main>
-      <Loader />
+      {/* <Loader /> */}
       <Hero />
       <Describe />
       <Projects />

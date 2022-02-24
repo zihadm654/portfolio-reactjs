@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { db } from "../lib/firebase"
 import { collection, getDocs } from "firebase/firestore";
-import Loader from "../components/Loader";
+// import Loader from "../components/Loader";
 import { textIntro, fadeIn } from "../helpers/Animation";
 
 const BlogPage = () => {
@@ -34,7 +34,7 @@ const BlogPage = () => {
   let heading1 = useRef(null)
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
       <div className="blog__page">
         <h3 ref={el => heading = el}>Blog</h3>
         <p ref={el => heading1 = el}>I've been writing online since 2021, mostly about web development and tech careers. In total, I've written 68 articles on this site. Use the search below to filter by title.</p>
