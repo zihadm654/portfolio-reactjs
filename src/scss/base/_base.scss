@@ -1,8 +1,8 @@
-@use '../helpers/mixins' as m;
-@use '../helpers/variables' as v;
-@use '../helpers/colors' as c;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@use "../helpers/mixins" as m;
+@use "../helpers/variables" as v;
+@use "../helpers/colors" as c;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
 
 * {
   margin: 0%;
@@ -41,10 +41,6 @@ body {
   font-family: v.$main-font;
   color: c.$dominant;
   .up {
-    @include m.media(sm) {
-      height: 6rem;
-      width: 6rem;
-    }
     height: 4rem;
     width: 4rem;
     cursor: pointer;
@@ -57,7 +53,7 @@ body {
     background: rgba(15, 20, 30, 0.3);
     @include m.flex(center);
     svg {
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: #fff;
     }
   }

@@ -16,7 +16,7 @@ const ContactPage = () => {
         <div className="content">
           <h5>LET'S TALK</h5>
           <h2>Hello! We've been waiting for you.</h2>
-          <p>Fill in the form or <span>Send us an email</span></p>
+          <p>Fill in the form or <a className="mail" href="mailto:zihadm654@gmail.com">Send us an email</a></p>
         </div>
         <form name="contact" onSubmit={sendEmail}>
           <div className="inputs">
