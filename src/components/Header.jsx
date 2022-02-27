@@ -32,7 +32,7 @@ const Header = () => {
             <NavLink to="/">
               <div className="logo">
                 <img src={Logo} alt="" loadin="lazy" />
-                <h4>Abdul Malik</h4>
+                <h4>Abdul Malek</h4>
               </div>
             </NavLink>
             <div

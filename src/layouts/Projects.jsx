@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import Button from '../helpers/Button'
 import LayoutCards from '../components/Cards'
 import { fadeIn } from "../helpers/Animation"
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs, limit, query, orderBy } from 'firebase/firestore'
 import { db } from '../lib/firebase'
 
 const Projects = () => {
@@ -13,8 +13,9 @@ const Projects = () => {
   useEffect(() => {
     fadeIn([title, subTitle])
     const fetchData = async () => {
-      const res = await (await getDocs(collection(db, "projects")))
-      const data = res.docs.map(doc => {
+      const res = await query(collection(db, "projects"), limit(6), orderBy("createdAt", "desc"))
+      const snap = await getDocs(res)
+      const data = snap?.docs.map(doc => {
         return {
           ...doc.data(),
           createdAt: doc.data().createdAt.toMillis(),

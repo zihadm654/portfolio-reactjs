@@ -52,7 +52,7 @@ const BlogDetails = () => {
         <h4>Conclusion:-</h4>
         <p>Learn by breaking things into parts and enjoying that you are doing that is the effective way to get going with programming. Because without understanding it you can't go long way. So, have fun.</p>
         <p>I am there to make developer life easier.</p>
-        <h5>I am Abdul malik.</h5>
+        <h5>I am Abdul malek.</h5>
         <span> Front-end-developer & UI/UX designer</span>
       </div>
     </div>

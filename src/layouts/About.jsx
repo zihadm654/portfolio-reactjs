@@ -14,7 +14,7 @@ const About = () => {
     <div className="about">
       <div className="about__wrapper">
         <div className="about__description">
-          <h5 ref={el => heading1 = el}>Hi, I’m Abdul Malik</h5>
+          <h5 ref={el => heading1 = el}>Hi, I’m Abdul malek</h5>
           <h3 ref={el => heading2 = el}>Frontend-developer & UI/UX designer.</h3>
           <p ref={el => para = el}>
             My journey as a self taught frontend developer with designing experience. As a self taught frontend developer it take a lot of dedications. <br /> Skills:- Reactjs, Javascript, Scss, Html, Css, Gsap, Github, Git.

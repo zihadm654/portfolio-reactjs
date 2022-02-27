@@ -12,7 +12,7 @@ export default function Loader() {
     <section className="loader"
       ref={(el) => (loader = el)}>
       <h1 className="title"
-        ref={el => title = el}>Abdul Malik</h1>
+        ref={el => title = el}>Abdul malek</h1>
       <div className="windmill">
         <h5 ref={el => line1 = el}>Frontend-Developer & UI/UX Designer</h5>
       </div>

@@ -54,7 +54,7 @@ const Contact = () => {
           <hr />
           <div className="copyright">
             <p>
-              &copy; 2021 Abdul Malik || Made in
+              &copy; 2021 Abdul malek || Made in
               {' '}
               <span
                 className={info ? "active" : ""}

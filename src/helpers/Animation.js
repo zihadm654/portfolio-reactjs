@@ -27,7 +27,7 @@ export const VerticalScroll = (el) => {
     ease: Power3.easeOut,
     scrollTrigger: {
       trigger: el,
-      start: "top 90%",
+      start: "top 95%",
       end: "bottom center",
     },
     stagger: {
@@ -49,17 +49,17 @@ export const HorizontalScroll = (el) => {
       width: "100%",
       scrollTrigger: {
         trigger: el,
-        start: "top 90%",
+        start: "top 95%",
         end: "bottom center",
       },
     }
   );
 };
 export const textIntro = (el) => {
-  gsap.from(el, 0.8, {
+  gsap.from(el, 1, {
     opacity: 0,
     y: 45,
-    delay: 0.2,
+    delay: 0.1,
     ease: Power3.easeOut,
     stagger: {
       amount: 0.6,
@@ -67,17 +67,17 @@ export const textIntro = (el) => {
   });
 };
 export const fadeIn = (el) => {
-  gsap.from(el, 0.8, {
+  gsap.from(el, 1, {
     opacity: 0,
-    delay: 0.2,
-    y: 63,
+    delay: 0.1,
+    y: 45,
     ease: Power3.inOut,
     stagger: {
       amount: 0.4,
     },
     scrollTrigger: {
       trigger: el,
-      start: "center 85%",
+      start: "center 95%",
       end: "bottom center",
     },
   });
@@ -85,10 +85,10 @@ export const fadeIn = (el) => {
 export const Links = (el) => {
   gsap.from(el, 0.7, {
     opacity: 0,
-    delay: 0.7,
+    delay: 0.6,
     y: 60,
     ease: Power3.easeOut,
-    stagger: { amount: 0.1 },
+    stagger: { amount: 0.2 },
   });
 };
 export const cardAni = (el) => {
@@ -98,7 +98,7 @@ export const cardAni = (el) => {
     ease: Power3.easeOut,
     scrollTrigger: {
       trigger: el,
-      start: "top 90%",
+      start: "top 95%",
       end: "bottom center",
     },
     stagger: { amount: 0.7 },

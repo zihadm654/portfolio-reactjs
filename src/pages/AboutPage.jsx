@@ -43,7 +43,7 @@ const AboutPage = () => {
         <div className="about__description">
           <h5 ref={el => heading1 = el}>A FEW WORDS ABOUT ME</h5>
           <h3 ref={el => heading2 = el}>
-            I’m Abdul Malik, a <span>Frontend-developer & UI/UX designer </span> who focuses on
+            I’m Abdul malek, a <span>Frontend-developer & UI/UX designer </span> who focuses on
             telling stories visually, through <span>minimalistic </span> and clear way. I design and develop <span>responsive websites </span>and functional user friendly interfaces.
           </h3>
           <p ref={el => para = el}>

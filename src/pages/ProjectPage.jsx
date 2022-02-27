@@ -12,7 +12,7 @@ const ProjectPage = () => {
     textIntro([head, para])
     const fetchData = async () => {
       const res = await getDocs(collection(db, "projects"))
-      const data = res.docs.map(doc => {
+      const data = res?.docs.map(doc => {
         return {
           ...doc.data(),
           id: doc.id
